@@ -9,7 +9,7 @@ App({
   InitCloud() {
     var that = this;
     wx.cloud.init({
-      env: config.CloudID,
+      env: 'cloud1-5gmggv5l8f2ead23',
       traceUser: true
     })
   },

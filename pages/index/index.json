@@ -3,5 +3,9 @@
     "mp-toptips": "weui-miniprogram/toptips/toptips",
     "mp-actionSheet": "weui-miniprogram/actionsheet/actionsheet"
   },
-  "navigationBarTitleText": "聊天室"
+  "navigationBarTitleText": "EchoSpace",
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light"
 }

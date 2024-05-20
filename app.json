@@ -1,6 +1,11 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/write/write",
+    "pages/community/community",
+    "pages/profile/profile",
+    "pages/chat/chat",
+    "pages/audioPlayer/audioPlayer"
   ],
   "requiredBackgroundModes": ["audio"],
   "useExtendedLib": {
@@ -14,12 +19,44 @@
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "Cloud聊天室",
+    "navigationBarTitleText": "EchoSpace",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
   "networkTimeout": {
     "request": 60000,
     "downloadFile": 60000
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#1aad19",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "icon/home.png",
+        "selectedIconPath": "icon/home-selected.png"
+      },
+      {
+        "pagePath": "pages/write/write",
+        "text": "写歌",
+        "iconPath": "icon/write.png",
+        "selectedIconPath": "icon/write-selected.png"
+      },
+      {
+        "pagePath": "pages/community/community",
+        "text": "社区",
+        "iconPath": "icon/community.png",
+        "selectedIconPath": "icon/community-selected.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "icon/profile.png",
+        "selectedIconPath": "icon/profile-selected.png"
+      }
+    ]
   }
 }

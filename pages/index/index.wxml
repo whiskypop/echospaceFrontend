@@ -1,11 +1,22 @@
-<mp-toptips msg="{{errMsg}}" type="error" show="{{errMsg}}"></mp-toptips>
-<music-player songInfo="{{songInfo}}" style="position:fixed;width:100%;z-index:999" />
-<!--聊天内容-->
-<chat-box roomId="{{roomId}}"></chat-box>
+<view class="container">
+  <view class="search-bar">
+    <text>主页</text>
+    <!-- <view class="search-icon">
+      <image src="/pages/index/images/search.png" alt="search" />
+    </view> -->
+  </view>
+  <view class="grid">
+  
+    <view class="grid-item" bindtap="navigateToRecord">记录</view>
+    <view class="grid-item write-song" bindtap="navigateToWrite">写歌</view>
+    <view class="grid-item" bindtap="navigateToChat">AI助手</view>
+  </view>
+  <view class="section">
+    <text>情感碎片</text>
+    <view class="section-grid">
+      <view class="section-item">今天</view>
+      <view class="section-item">今天</view>
+    </view>
+  </view>
 
-<view class="cu-bar foot input {{InputBottom!=0?'cur':''}}" style="bottom:{{InputBottom}}px">
-
-  <input class="solid-bottom" bindfocus="InputFocus" bindblur="InputBlur" model:value="{{content}}"
-    adjust-position="{{false}}" focus="{{false}}" maxlength="300" cursor-spacing="10"></input>
-  <button class="cu-btn bg-green shadow" bindtap="submit">发送</button>
 </view>

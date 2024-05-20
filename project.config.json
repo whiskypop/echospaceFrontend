@@ -1,5 +1,5 @@
 {
-  "appid": "touristappid",
+  "appid": "wx7eaaec27cb46c77a",
   "compileType": "miniprogram",
   "libVersion": "2.25.3",
   "packOptions": {
@@ -24,5 +24,7 @@
   "editorSetting": {
     "tabIndent": "insertSpaces",
     "tabSize": 2
-  }
+  },
+  "cloudfunctionRoot": "cloudFunctions/",
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate/"
 }

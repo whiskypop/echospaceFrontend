@@ -1,0 +1,23 @@
+<view class="container">
+  <view wx:if="{{!showLyrics}}" class="cover-container">
+    <image class="cover" src="{{imageUrl}}" bindtap="toggleLyrics"/>
+    <text class="title">{{title}}</text>
+    <text class="artist">{{artist}}</text>
+  </view>
+
+  <view wx:if="{{showLyrics}}" class="lyrics-container" bindtap="toggleLyrics">
+    <text>{{lyrics}}</text>
+  </view>
+
+  <view class="controls">
+    <text>{{currentTime}}</text>
+    <slider value="{{audioCtx.currentTime}}" max="{{audioCtx.duration}}" show-value/>
+    <text>{{duration}}</text>
+  </view>
+
+  <view class="buttons">
+    <button bindtap="togglePlay">
+      <text>{{playing ? '暂停' : '播放'}}</text>
+    </button>
+  </view>
+</view>

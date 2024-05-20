@@ -1,0 +1,63 @@
+.container {
+  padding: 16px;
+}
+
+textarea,
+.button-container,
+button {
+  display: block;
+  margin-top: 8px;
+  width: 100%;
+}
+
+textarea {
+  height: 200px; /* 高度调整为 200px */
+  border: 1px solid #ccc;
+}
+
+.option-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.option-container button {
+  flex: 1 0 32%;
+  margin: 4px;
+  height: 40px;
+  border: 1px solid rgb(223, 217, 217);
+  background-color: rgba(247, 237, 237, 0.74);
+  color: black;
+  text-align: center;
+  cursor: pointer;
+}
+
+.option-container button:selected {
+  background-color: black; /* 黑底 */
+  color: white; /* 白字 */
+}
+
+.option-container button:hover {
+  background-color: rgb(209, 201, 201); /* 悬停时变成灰色 */
+  color: white; /* 文字变白 */
+}
+
+button.create {
+  background-color: #6e3081;
+  color: white;
+  height: 40px;
+  font-weight: bold;
+}
+
+.audio-item {
+  margin-bottom: 16px;
+}
+
+.audio-item image {
+  width: 100px;
+  height: 100px;
+  display: block;
+}
+
+.audio-item audio {
+  width: 100%;
+}

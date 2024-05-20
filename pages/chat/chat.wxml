@@ -1,0 +1,16 @@
+<mp-toptips msg="{{errMsg}}" type="error" show="{{errMsg}}"></mp-toptips>
+<music-player songInfo="{{songInfo}}" style="position:fixed;width:100%;z-index:999" />
+<!--聊天内容-->
+<chat-box roomId="{{roomId}}"></chat-box>
+
+<view class="cu-bar foot input {{InputBottom!=0?'cur':''}}" style="bottom:{{InputBottom}}px">
+
+  <input class="solid-bottom" bindfocus="InputFocus" bindblur="InputBlur" model:value="{{content}}"
+    adjust-position="{{false}}" focus="{{false}}" maxlength="300" cursor-spacing="10"></input>
+  <!-- 发送按钮 -->
+  <button class="cu-btn bg-black shadow" bindtap="submit">submit</button>
+  <!-- 选择图片按钮 -->
+  <button class="cu-btn bg-transparent shadow" bindtap="chooseImage">
+    <text class="cuIcon-add" style="color: #888;"></text>
+  </button>
+</view>
