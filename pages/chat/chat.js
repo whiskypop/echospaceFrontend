@@ -1,9 +1,5 @@
 var fs = wx.getFileSystemManager()
-// 创建 Azure 存储服务的连接字符串
-// const connectionString = 'DefaultEndpointsProtocol=https;AccountName=comicstorage;AccountKey=nronbCYvwQevIwiU5J0ghU6oEpGPK3HF2CpE60y3oomTUNKwJA62J7xml1tBW7TcRAgkVOIQP9at+AStZGRwUQ==;EndpointSuffix=core.windows.net'
 
-// 创建 Blob 服务
-// const blobService = azure.createBlobService(connectionString);
 // 获取全局APP
 const app = getApp();
 // 上传图片到 Azure Blob 存储
