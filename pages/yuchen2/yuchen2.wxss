@@ -37,15 +37,23 @@
 }
 
 .main-image {
-  position: relative;
-  margin: 20rpx;
-  text-align: center;
+    position: relative;
+    text-align: center;
+    display: flex;
+    width: 90%;
+    height: 387px; /* 或者你需要的高度 */
+    margin: 0 auto;
 }
 
-.main-img {
-  width: 100%;
-  height: 300rpx;
+.background-video {
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    border-radius: 25px;
+    margin: 0 auto;
 }
+
 
 .product-description, .product-name {
   position: absolute;
@@ -57,29 +65,56 @@
 .apply-button {
   position: absolute;
   bottom: 20rpx;
-  right: 20rpx;
-  background-color: #800080; /* Gradient equivalent */
+  right: 20px;
+  width: 120px !important;
+  background: linear-gradient(90deg, 
+    #E631FF 0%, 
+    #AF2CF9 21%, 
+    #6726F2 50%, 
+    #1A8DF6 73%, 
+    #32C9FC 100%
+  );
   color: #fff;
   padding: 10rpx 20rpx;
-  border-radius: 10rpx;
+  border-radius: 25px;
+}
+.text-container {
+    position: absolute;
+    bottom: 20rpx;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+.effect-description {
+    font-size: 16px;
+    color: #808080;
+    font-weight: bold;
+}
+.containerName {
+    font-size: 30px;
+    color: #FFFFFF;
+    font-weight: bold;
+    line-height: 44px;
 }
 
-.sub-images {
+.cartGifts {
   display: flex;
-  justify-content: space-around;
-  margin: 20rpx 0;
+  margin-top: 10px;
+  margin-left: 23px;
 }
 
-.sub-img {
-  width: 80rpx;
-  height: 80rpx;
-  background-color: #0000ff;
-}
+.product-video {
+    width: 53px;
+    height: 53px;
+    border-radius: 16px;
+    margin: 0 20px;
+  }
 
 .categories {
   display: flex;
   justify-content: space-around;
-  margin: 20rpx 0;
+  margin: 30px 0;
 }
 
 .grid {
@@ -93,4 +128,70 @@
   height: 150rpx;
   margin: 10rpx;
   background-color: #ff9999; /* Pink */
+  border-radius: 16px;
 }
+
+.cart-info {
+    position: fixed;
+    bottom: 0;
+    height: 79px;
+  
+    width: 100%;
+    background-color: #1B1C1F;
+    padding: 18px 21px;
+    display: flex;
+    
+    align-items: center;
+    color: white;
+    
+  }
+  
+  .money-detail {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* 设置宽度为100% */
+    margin-right: 10px;
+    align-items: flex-end; /* 垂直居中对齐 */
+    justify-content: flex-end; /* 水平靠右对齐 */
+    gap: 1px;
+  }
+  
+  
+  .button-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-right: 10px;
+    width: 115px;
+    height: 37px;
+  }
+  
+  .create-button {
+    background: linear-gradient(90deg, 
+    #E631FF 0%, 
+    #AF2CF9 21%, 
+    #6726F2 50%, 
+    #1A8DF6 73%, 
+    #32C9FC 100%
+  );
+  color: white;
+  border: none;
+  border-radius: 25px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 115px !important;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0;
+  box-sizing: border-box;
+  height: 37px;
+}
+
+.cards-subTitledetail {
+    color: #BABABA;
+    font-size: 12px;
+    text-align: left;
+    line-height: 18px;
+  }

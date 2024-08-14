@@ -209,8 +209,9 @@ Page({
 
   navigateToOnlyGifts() {
     const cartData = JSON.stringify(this.data.cart);
+    const totalPrice = this.data.totalPrice;
     wx.navigateTo({
-      url: `/pages/onlyGifts/onlyGifts?cartData=${encodeURIComponent(cartData)}`
+      url: `/pages/onlyGifts/onlyGifts?cartData=${encodeURIComponent(cartData)}&totalPrice=${encodeURIComponent(totalPrice)}`
     });
   },
   navigatToYuchen1() {
@@ -220,8 +221,9 @@ Page({
   },
   navigateToYuchen2() {
     const cartData = JSON.stringify(this.data.cart);
+    const totalPrice = this.data.totalPrice;
     wx.navigateTo({
-      url: `/pages/yuchen2/yuchen2?cartData=${encodeURIComponent(cartData)}`
+      url: `/pages/yuchen2/yuchen2?cartData=${encodeURIComponent(cartData)}&totalPrice=${encodeURIComponent(totalPrice)}`
     });
   },
 

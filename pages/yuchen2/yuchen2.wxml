@@ -5,18 +5,28 @@
   </view>
 
   <view class="main-image">
-    <image src="/images/main-image.png" class="main-img"></image>
-    <text class="product-description">动效描述</text>
-    <text class="product-name">商品名</text>
+    <video class="background-video" src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundVideo/foodPepsi.mp4" autoplay loop muted controls="{{false}}" ></video>
+    <!-- <text class="product-description">动效描述</text>
+    <text class="product-name">商品名</text> -->
     <button class="apply-button">应用全部</button>
+    <view class="text-container">
+        <text class="effect-description">动效描述</text>
+        <text class="containerName">商品名</text>     
+    </view>
   </view>
 
-  <view class="sub-images">
-    <image src="/images/sub-image1.png" class="sub-img"></image>
-    <image src="/images/sub-image2.png" class="sub-img"></image>
-    <image src="/images/sub-image3.png" class="sub-img"></image>
-    <image src="/images/sub-image4.png" class="sub-img"></image>
-  </view>
+  <view class="cartGifts">
+    <block wx:for="{{cartItems}}" wx:key="index">
+        <video class="product-video"
+            src="{{item.video}}"
+            autoplay
+            loop
+            muted
+            controls="{{false}}">
+        </video>
+    </block>
+    </view>
+
 
   <view class="categories">
     <text class="category">音效</text>
@@ -31,5 +41,14 @@
     <image src="/images/grid-image2.png" class="grid-img"></image>
     <image src="/images/grid-image3.png" class="grid-img"></image>
     <!-- Add more images as needed -->
+  </view>
+  <view class="cart-info">
+    <view class="money-detail">
+        <text class="cards-subTitledetail">明细</text>
+        <text class="cards-subTitledetail">￥{{totalPrice}}</text>
+    </view>
+    <view class="button-container ">
+        <button class="create-button" bindtap="navigateToOnlyGifts">下一步</button>
+    </view>
   </view>
 </view>

@@ -25,6 +25,7 @@ Page({
     showGiftPopup: false, // 控制礼物弹出框的显示
     selectedGift: {}, // 选中的礼物信息
     filteredBenefits: [],
+    totalPrice: 0
   },
   
 
@@ -127,6 +128,11 @@ Page({
       } catch (e) {
         console.error('Failed to parse audioInfo:', e);
       }
+    }
+    if (options.totalPrice) {
+        this.setData({
+          totalPrice: decodeURIComponent(options.totalPrice)
+        });
     }
   },
   getAudioDuration: function(innerAudioContext) {
