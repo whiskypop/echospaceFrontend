@@ -1,63 +1,174 @@
 .container {
+  background-color: black;
+  color: white;
   padding: 16px;
+  min-height: 100vh;
 }
 
-textarea,
-.button-container,
-button {
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  position: relative;
+}
+
+.save {
+  font-size: 16px;
+  line-height: 38px;
+  font-weight: semibold;
+  color: #ffffff;
+  position: absolute; /* 使用绝对定位 */
+  top: 46px; /* 距离顶部的距离 */
+  right: 16px; /* 距离右侧的距离 */
+}
+
+
+.title {
+  font-size: 32px; /* 调整字体大小为32px */
+  line-height: 38px;
+  font-weight: bold;
+  /* padding-left: 15px; */
+
+}
+
+
+.content {
+  margin-top: 40px;
+  padding-left: 5px; 
+  padding-right: 5px; 
+}
+
+.section {
+  background-color: #1B1C1F;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  padding: 15px 15px 0px 15px; 
+}
+
+.label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
   display: block;
-  margin-top: 8px;
-  width: 100%;
+}
+.reference-button {
+  position: absolute;
+  height: 40px;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.041); /* 半透明背景 */
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  /* 垂直居中 */
+  align-items: center; 
+  justify-content: center; /* 水平居中 */
+  width: 100px !important; /* 固定宽度，示例 */
 }
 
-textarea {
-  height: 200px; /* 高度调整为 200px */
-  border: 1px solid #ccc;
+
+.textarea {
+  background-color: #1B1C1F;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  height: 200px;
+}
+
+.input {
+  flex: 1 0 40%; /* 调整宽度 */
+  margin: 4px 200px 0px 0; /* 调整右侧间距 */
+  height: 26.16px;
+  line-height: 26.16px;
+  border: none;
+  background-color: #444;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 0 10px;
+  font-size: 12px;
+}
+
+.theme-select {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  display: block;
 }
 
 .option-container {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start; /* 使选项按钮向上对齐 */
+  justify-content: flex-start; /* 使选项按钮从左开始排列 */
+  height: auto; /* 自适应高度 */
 }
 
 .option-container button {
-  flex: 1 0 32%;
-  margin: 4px;
-  height: 40px;
-  border: 1px solid rgb(223, 217, 217);
-  background-color: rgba(247, 237, 237, 0.74);
-  color: black;
+  flex: 1 0 17%;
+  margin: 4px; /* 调整按钮之间的间距 */
+  height: 26.16px;
+  line-height: 26.16px;
+  border: none;
+  background-color: #444;
+  color: white;
   text-align: center;
   cursor: pointer;
+  border-radius: 20px;
+  padding: 0px 5px;
+  font-size: 10px;
 }
 
-.option-container button:selected {
-  background-color: black; /* 黑底 */
-  color: white; /* 白字 */
+
+.option-container button.selected {
+  background-color: #7661F1; /* 选中状态的背景色 */
+  color: white; /* 选中状态的文字颜色 */
+  border-radius: 25px;
 }
 
-.option-container button:hover {
-  background-color: rgb(209, 201, 201); /* 悬停时变成灰色 */
-  color: white; /* 文字变白 */
+.music-style {
+  /* 添加音乐风格特有的样式 */
+  height: 150px;
 }
 
-button.create {
-  background-color: #6e3081;
+.gift-price {
+  /* 添加礼物价格特有的样式 */
+  height: 120px;
+}
+
+.slider {
+  margin-top: 10px;
+}
+
+.create-button {
+  background: linear-gradient(90deg, 
+    #E631FF 0%, 
+    #AF2CF9 21%, 
+    #6726F2 50%, 
+    #1A8DF6 73%, 
+    #32C9FC 100%
+  );
   color: white;
-  height: 40px;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
+  text-align: center;
+  width: 50%;
+  height: auto;
+  font-size: 18px;
   font-weight: bold;
-}
-
-.audio-item {
-  margin-bottom: 16px;
-}
-
-.audio-item image {
-  width: 100px;
-  height: 100px;
-  display: block;
-}
-
-.audio-item audio {
-  width: 100%;
+  margin-top: 20px;
+  position: fixed; /* 固定在底部 */
+  bottom: 10px; /* 距离底部0 */
+  left: 120px; /* 距离左边0 */
+  z-index: 1000; /* 确保在最上层 */
 }

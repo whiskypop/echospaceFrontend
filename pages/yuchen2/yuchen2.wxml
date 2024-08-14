@@ -1,0 +1,35 @@
+<view class="container">
+  <view class="heading-component1">
+    <text class="title">定制</text>
+    <text class="discription">请在此定制商品动效</text>
+  </view>
+
+  <view class="main-image">
+    <image src="/images/main-image.png" class="main-img"></image>
+    <text class="product-description">动效描述</text>
+    <text class="product-name">商品名</text>
+    <button class="apply-button">应用全部</button>
+  </view>
+
+  <view class="sub-images">
+    <image src="/images/sub-image1.png" class="sub-img"></image>
+    <image src="/images/sub-image2.png" class="sub-img"></image>
+    <image src="/images/sub-image3.png" class="sub-img"></image>
+    <image src="/images/sub-image4.png" class="sub-img"></image>
+  </view>
+
+  <view class="categories">
+    <text class="category">音效</text>
+    <text class="category">动效</text>
+    <text class="category">创意</text>
+    <text class="category">游戏</text>
+    <text class="category">互动</text>
+  </view>
+
+  <view class="grid">
+    <image src="/images/grid-image1.png" class="grid-img"></image>
+    <image src="/images/grid-image2.png" class="grid-img"></image>
+    <image src="/images/grid-image3.png" class="grid-img"></image>
+    <!-- Add more images as needed -->
+  </view>
+</view>

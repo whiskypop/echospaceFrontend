@@ -1,0 +1,4 @@
+<view class="loading-container">
+  <image src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundImage/loading.gif" class="loading-image" />
+  <text class="text">AI is generating...</text>
+</view>

@@ -1,0 +1,155 @@
+<view class="container">
+  <view class="header">
+    <view class="title">送TA礼物·定制礼物</view>
+  </view>
+
+  <scroll-view class="content" scroll-y>
+    <!-- 礼物部分 -->
+    <view class="benefits-section">
+      <text class="section-title">权益礼物</text>
+      <scroll-view class="benefits-scroll" scroll-x="true">
+        <view class="benefit-item" wx:for="{{benefits}}" wx:key="index">
+          <!-- 点击礼物触发toggleGiftPopup方法 -->
+          <video src="{{item.video}}" class="benefit-video" loop autoplay muted show-play-btn="{{false}}" controls="{{false}}" bindtap="showGiftPopup" data-index="{{index}}"></video>
+          <view class="benefit-details">
+            <text class="benefit-name">{{item.name}}</text>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <!-- <view class="section">
+      
+    </view> -->
+
+    <!-- 礼物弹出框 -->
+    <view class="gift-popup {{showGiftPopup ? 'show-popup' : ''}}">
+      <view class="gift-popup-content">
+        <!-- 使用视频代替图片 -->
+        <video  
+          class="gift-video"
+          src="{{selectedGift.videoUrl}}"
+          muted
+          autoplay
+          loop
+          controls
+        ></video>
+        <view class="gift-controls">
+          <button class="play-button" bindtap="toggleGiftAudio">
+            <image src="{{isGiftPlaying ? 'cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundImage/pause.png' : 'cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundImage/play.png'}}" class="play-icon" />
+          </button>
+          <text class="gift-description">{{selectedGift.name}}</text>
+        </view>
+        <button class="gift-close-button" bindtap="closeGiftPopup">Close</button>
+      </view>
+    </view>
+
+    <!-- 加号 -->
+    <view class="benefits-section">
+      <text class="section-title">创意礼物</text>
+      <view class="music-card">
+        <view class="background" style="background-image: url('{{audioInfo[0].image_url}}');"></view>
+        <view class="content">
+          <image class="music-image" src="{{audioInfo[0].image_url}}" />
+          <view class="music-info">
+            <text class="music-title">{{audioInfo[0].title}}</text>
+            <scroll-view class="lyric-scroll" scroll-y="true">
+              <text class="lyric">{{audioInfo[0].lyric}}</text>
+            </scroll-view>
+          </view>
+          <view class="music-controls">
+            <!-- 进度条 -->
+            <view class="slider-container">
+              <text class="time">{{formattedCurrentTime}}</text>
+              <slider 
+                class="custom-slider"
+                min="0" 
+                max="{{duration}}" 
+                block-size="12px"
+                value="{{currentTime}}" 
+                activeColor="#fff"
+                backgroundColor="#e9e9e9"
+                bindchanging="handleSliderChanging"
+                bindchange="seekMusic" />
+              <text class="time">{{formattedDuration}}</text>
+            </view>
+            <button class="play-button" bindtap="toggleMusicPlay">
+                <image src="{{isMusicPlaying ? 'cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundImage/pause.png' : 'cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundImage/play.png'}}" class="play-icon" />
+            </button>
+          </view>
+          <button class="expand-button" bindtap="goToMusicPage">⤢</button>
+        </view>
+        
+      </view>
+      <text class="label">音乐专辑</text>
+        <!-- 新增的两个小组件部分 -->
+      <view class="photos-section">
+        <view class="photos">
+          <video src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundVideo/cartoonBirthday.mp4" class="photos-video" loop autoplay muted show-play-btn="{{false}}" controls="{{false}}" mode="widthFix"></video>
+          <text class="widget-title">海绵宝宝</text>
+        </view>
+        <view class="photos">
+          <image src="{{tempFilePath}}" class="photos-image" mode="heightFix"></image>
+          <text class="widget-title">艺术写真</text>
+        </view>
+      </view>
+      <view class="plus-section">
+        <view class="plus-widget">
+          <image src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundImage/Plus.png" class="widget-image" mode="widthFix" bindtap="navigateToList"></image>
+        </view>
+      </view>
+    </view>
+    <view class="benefits-section">
+      <text class="section-title2" enable-flex="true">相关推荐</text>
+      <view class="tags-section">
+        <view class="tags-container">
+          <block wx:for="{{tags}}" wx:key="*this">
+            <button class="tag {{item === selectedTag ? 'selected' : ''}}" bindtap="toggleSelection" data-tag="{{item}}">{{item}}</button>
+          </block>
+          <button class="dropdown-button" bindtap="toggleMoreTags">More</button>
+        </view>
+      </view>
+      <!-- 音乐卡片 -->
+      <view class="new-widgets-section">
+        <scroll-view scroll-x="true" enable-flex="true" class="horizontal-scroll">
+          <view class="new-widget">
+            <video src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundVideo/mallCat.mp4" class="widget-video" loop autoplay muted show-play-btn="{{false}}" controls="{{false}}"></video>
+            <text class="widget-text">宠物周年照</text>
+          </view>
+          <view class="new-widget">
+            <video src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundVideo/mallMusic.mp4" class="widget-video" loop autoplay muted show-play-btn="{{false}}" controls="{{false}}" bindtap="navigateToWrite"></video>
+            <text class="widget-text">浪漫音乐告白</text>
+          </view>
+          <view class="new-widget">
+            <video src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundVideo/chritmas.mp4" class="widget-video" loop autoplay muted show-play-btn="{{false}}" controls="{{false}}"></video>
+            <text class="widget-text">节日庆祝</text>
+          </view>
+          <view class="new-widget">
+            <video src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundVideo/cat.mp4" class="widget-video" loop autoplay muted show-play-btn="{{false}}" controls="{{false}}"></video>
+            <text class="widget-text">新年快乐</text>
+          </view>
+          <view class="new-widget">
+            <video src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundVideo/memory.mp4" class="widget-video" loop autoplay muted show-play-btn="{{false}}" controls="{{false}}"></video>
+            <text class="widget-text">美好记忆</text>
+          </view>
+          <view class="new-widget">
+            <video src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundVideo/chat.mp4" class="widget-video" loop autoplay muted show-play-btn="{{false}}" controls="{{false}}"></video>
+            <text class="widget-text">聊天回忆</text>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+
+  </scroll-view>
+  <view class="footer">
+    <button class="share-button" bindtap="goToPreviewPage">一键预览</button>
+  </view>
+
+  <!-- Share Popup -->
+  <view class="blur-background {{showPopup ? 'show-popup' : ''}}"></view>
+  <view class="share-popup" wx:if="{{showPopup}}">
+    <view class="popup-content">
+      <video src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundImage/MicrosoftTeams-video (1).mp4" class="widget-video" loop autoplay muted show-play-btn="{{false}}" controls="{{false}}"></video>
+      <button class="close-button" bindtap="hideSharePopup">×</button>
+    </view>
+  </view>
+</view>

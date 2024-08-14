@@ -1,0 +1,171 @@
+/* 整体布局 */
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 组件 1 */
+.component1 {
+  width: 100%;
+  height: 300px;
+  padding: 18px 21px;
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  border-bottom-left-radius: 16px; /* 只设置下边圆角 */
+  border-bottom-right-radius: 16px; /* 只设置下边圆角 */
+  border-top-left-radius: 0; /* 上边无圆角 */
+  border-top-right-radius: 0; /* 上边无圆角 */
+}
+
+/* 子组件 1-1 */
+.subcomponent1-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+
+/* 文本容器 */
+.text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 副标题 */
+.subtitle {
+  color: #BABABA;
+  font-size: 16px;
+  text-align: left;
+  line-height: 1.5;
+}
+
+/* 标题 */
+.title {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: left;
+  line-height: 44px;
+  margin-right: 10px;
+}
+
+/* 按钮容器 */
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-right: 10px;
+}
+
+.button {
+  background: linear-gradient(90deg, 
+    #E631FF 0%, 
+    #AF2CF9 21%, 
+    #6726F2 50%, 
+    #1A8DF6 73%, 
+    #32C9FC 100%
+  );
+  color: white;
+  border: none;
+  border-radius: 25px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 115px !important;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0;
+  box-sizing: border-box;
+  height: 37px;
+}
+
+/* 组件 2 */
+.component2 {
+  width: 100%;
+  padding: 21px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+/* 列 */
+.column {
+  display: flex;
+  flex-direction: row; /* 改为水平排列 */
+  gap: 10px;
+}
+
+/* 子组件 2-1 */
+.subcomponent2-1,
+.subcomponent2-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* 子组件 2-1-1 */
+.subcomponent2-1-1,
+.subcomponent2-1-2,
+.subcomponent2-1-3,
+.subcomponent2-2-1,
+.subcomponent2-2-2 {
+  width: 189px;
+  
+  background-color: #161616;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+/* 蓝色正方形 */
+.square {
+  width: 189px;
+  height: 189px;
+  background-color: blue;
+  border-radius: 10px;
+}
+
+/* 信息容器 */
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  
+  padding: 7px 10px;
+}
+
+/* 信息文本 */
+.info-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-info {
+  color: white;
+  font-size: 16px;
+}
+
+.price {
+  color: gray;
+  font-size: 10px;
+}
+/* 蓝色圆形 */
+.circle {
+  width: 20px; /* 宽度 */
+  height: 20px; /* 高度 */
+  background-color: blue; /* 背景颜色 */
+  border-radius: 50%; /* 圆形 */
+  display: flex; /* 使用 flex 布局 */
+  justify-content: center; /* 水平居中对齐 */
+  align-items: center; /* 垂直居中对齐 */
+}

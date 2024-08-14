@@ -1,2 +1,18 @@
-<!--pages/community/community.wxml-->
-<text>pages/community/community.wxml</text>
+<view class="container">
+  <!-- 这里放置页面头部等其他内容 -->
+
+  <view class="audio-list">
+    <!-- 使用wx:for循环遍历音乐列表 -->
+    <view class="audio-box" wx:for="{{musicList}}" wx:key="id">
+      <image src="{{ item.image_url }}" mode="left" class="cover-image"></image>
+      <text class="song-title">{{ item.title }}</text>
+      <scroll-view class="lyric-scroll" scroll-y="true">
+        <text class="lyric">{{ item.lyric }}</text>
+      </scroll-view>
+      <button class="play-button" data-id="{{ item.id }}" bindtap="togglePlay">{{ item.isPlaying ? 'pause' : 'play' }}</button>
+    </view>
+
+  </view>
+
+  <!-- 这里可以放置其他内容，如加载更多按钮等 -->
+</view>

@@ -54,7 +54,7 @@ Page({
     // 添加用户输入到聊天列表
     cht.data.chatList.push({
       "type": "man",
-      "avatarUrl": "image/user.jpeg",
+      "avatarUrl": "cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundImage/Amy.png",
       "content": that.data.content,
     });
     cht.setData({
@@ -67,14 +67,16 @@ Page({
     });
 
     // 发送请求到后端
-    wx.request({
-      url: 'http://localhost:8080/chat_itf/',
-      method: 'POST',
-      header: {
-        'content-type': 'application/json',
-        'X-WX-SERVICE': 'django-q86u'
+    wx.cloud.callContainer({
+      "config": {
+        "env": "prod-6g2zfwut93ab0db6"
       },
-      data: {
+      "path": "/chat_itf/",
+      "header": {
+        "X-WX-SERVICE": "echo"
+      },
+      "method": "POST",
+      "data": {
         prompt: content
       },
       success(res) {
@@ -83,7 +85,7 @@ Page({
         cht.data.chatList.push({
           "type": "rob",
           "content": robContent,
-          "avatarUrl": "image/openai-avatar.png",
+          "avatarUrl": "cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundImage/echo.png",
         });
         cht.setData({
           chatList: cht.data.chatList,

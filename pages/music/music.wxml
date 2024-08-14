@@ -1,0 +1,36 @@
+<view class="container">
+  <view class="bg-color"></view>
+  <image class="bg-img" src="{{audioInfo[0].image_url}}" mode="aspectFill" />
+  <view class="content">
+    <button class="minimize-button" bindtap="goToMusicPlay">↙</button>
+    <image class="cover" src="{{audioInfo[0].image_url}}" />
+    <text class="title">{{audioInfo[0].title}}</text>
+    <scroll-view class="lyric-scroll" scroll-y="true">
+      <text class="lyric">{{audioInfo[0].lyric}}</text>
+    </scroll-view>
+    <view class="slider-container">
+      <view style="position: absolute; left: -10px;">
+        <text class="time-info">{{formattedCurrentTime}}</text>
+      </view>
+      <view style="position: absolute; right: -20px;">
+        <text class="time-info">{{formattedDuration}}</text>
+      </view>
+      <slider 
+        class="custom-slider"
+        min="0" 
+        max="{{duration}}" 
+        block-size="12px"
+        value="{{currentTime}}" 
+        activeColor="#fff"
+        backgroundColor="#e9e9e9"
+        bindchanging="handleSliderChanging" 
+        bindchange="seekMusic"
+      />
+    </view>
+
+    
+    <button class="play-btn" bindtap="togglePlay">
+      <image src="{{isPlaying ? 'cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundImage/pause.png' : 'cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundImage/play.png'}}" class="play-icon" />
+    </button>
+  </view>
+</view>

@@ -1,0 +1,141 @@
+.container {
+  width: 100%;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.component1 {
+  width: 100%;
+  height: 400px;
+  padding: 18px 21px;
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  border-bottom-left-radius: 16px; /* 只设置下边圆角 */
+  border-bottom-right-radius: 16px; /* 只设置下边圆角 */
+  border-top-left-radius: 0; /* 上边无圆角 */
+  border-top-right-radius: 0; /* 上边无圆角 */
+}
+
+.subcomponent1-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.subtitle {
+  color: #BABABA;
+  font-size: 16px;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.title {
+  font-size: 30px;
+  line-height: 44px;
+  font-weight: bold;
+  text-align: left;
+  color: white;
+  margin-right: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-right: 10px;
+  width: 115px;
+  height: 37px;
+}
+
+.button {
+  background: linear-gradient(90deg, 
+    #E631FF 0%, 
+    #AF2CF9 21%, 
+    #6726F2 50%, 
+    #1A8DF6 73%, 
+    #32C9FC 100%
+  );
+  color: white;
+  border: none;
+  border-radius: 25px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 115px !important;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0;
+  box-sizing: border-box;
+  height: 37px;
+}
+
+.subcomponent1-2 {
+  width: 593px;
+  height: 248px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.subcomponent1-2-1, .subcomponent1-2-2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 18px;
+  width: 511px;
+  gap: 18px; /* 添加间距 */
+}
+
+.subcomponent1-2-1 {
+  margin-left: 30px;
+}
+.subcomponent1-2-2 {
+  margin-left: 105px;
+}
+
+.square {
+  width: 115px;
+  height: 115px;
+  background-color: blue;
+  border-radius: 16px;
+  
+}
+
+.component2 {
+  width: 430px;
+  padding: 21px;
+  
+}
+
+.subcomponent2-1 {
+  width: 387px;
+  height: 185px;
+  background-color: pink;
+  border-radius: 16px; /* 添加圆角 */
+}
+
+.subcomponent2-2 {
+  margin-top: 18px;
+  display: flex;
+  gap: 18px;
+}
+
+.subcomponent2-2 .square {
+  width: 185px;
+  height: 185px;
+  background-color: pink;
+  border-radius: 16px; /* 添加圆角 */
+}

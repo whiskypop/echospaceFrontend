@@ -1,43 +1,38 @@
 <view class="container">
-  <text>你想表达什么</text>
-  <textarea name="moodDescription" placeholder="Enter what you want to express here..." bindinput="inputMood"></textarea>
-
-  <text>主题灵感</text>
-  <view class="option-container">
-    <block wx:for="{{themes}}" wx:key="theme">
-      <button  data-item="{{item}}" bindtap="toggleThemeSelection" class="{{selectedThemes.indexOf(item) === -1 ? 'selected' : ''}}">
-        {{item}}
-      </button>
-    </block>
+  <view class="header">
+    <!-- <view class="back" bindtap="goBack">←</view> -->
+    <view class="title">创意商城·音乐专辑定制</view>
+    <view class="save" bindtap="save">save</view>
   </view>
 
-  <text>音乐类型</text>
-  <view class="option-container">
-    <block wx:for="{{musicTypes}}" wx:key="type">
-      <button data-item="{{item}}" bindtap="toggleMusicTypeSelection" class="{{selectedMusicTypes.indexOf(item) === -1 ? 'selected' : ''}}">
-        {{item}}
-      </button>
-    </block>
-  </view>
-  
-  <button class = "create" bindtap="create">创作</button>
-  <view class="section" wx:if="{{lyrics}}">
-    <text>标题: {{title}}</text>
-    <text>标签: {{tags}}</text>
-    <text>歌词:</text>
-    <text>{{lyrics}}</text>
-  </view>
-
-  <view class="section" wx:if="{{audioInfo.length > 0}}">
-    <text>生成的音频:</text>
-    <block wx:for="{{audioInfo}}" wx:key="id">
-      <view class="audio-item">
-        <text>{{item.title}}</text>
-        <image src="{{item.image_url}}" alt="cover"/>
-        <button bindtap="playAudio" data-audiourl="{{item.audio_url}}">播放</button>
+  <scroll-view class="content" scroll-y>
+    <view class="section">
+      <text class="label">你想要表达什么？</text>
+      <textarea class="textarea" placeholder="请描述你想表达的内容在这...例如，我想给15岁的儿子送一首生日祝福歌" bindinput="inputMood"></textarea>
+      <text class="theme-select">主题选择</text>
+      <view class="option-container">
+        <block wx:for="{{themes}}" wx:key="index">
+          <button data-item="{{item}}" bindtap="toggleThemeSelection" class="{{item.selected ? 'selected' : ''}}">
+            {{item.title}}
+          </button>
+        </block>
       </view>
-    </block>
-  </view>
+      <input class="input" placeholder="# Search Tags..." />
+      <button class="reference-button" bindtap="navigateToChat">参考</button>
+    </view>
 
-  <!-- <audio src="{{currentAudioUrl}}" controls autoplay></audio> -->
+    <view class="section music-style">
+      <text class="label">音乐风格</text>
+      <view class="option-container">
+        <block wx:for="{{musicTypes}}" wx:key="index">
+          <button data-item="{{item}}" bindtap="toggleMusicTypeSelection" class="{{item.selected ? 'selected' : ''}}">
+            {{item.title}}
+          </button>
+        </block>
+      </view>
+    </view>
+  </scroll-view>
+
+  <!-- <button class="create-button" bindtap="create">去创作</button> -->
+  <button class="create-button" bindtap="mockCreate">去创作</button>
 </view>

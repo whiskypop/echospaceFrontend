@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="bg-color"></view>
+  <view class="header">
+    <text class="header-title">预览</text>
+    <!-- <button class="save-button" bindtap="save">Save</button> -->
+  </view>
+  <view class="poster">
+    <view class="poster-bg"></view>
+    <video src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundVideo/share.mp4" class="share-video" loop autoplay muted show-play-btn="{{false}}" controls="{{false}}"></video>
+    <!-- <view class="overlay">
+      <text class="title">{{audioInfo[0].title}}</text>
+      <text class="subtitle">From Ariana Grande</text>
+      <button class="play-button" bindtap="togglePlay">
+          <image src="{{isPlaying ? 'cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundImage/pause.png' : 'cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundImage/play.png'}}" class="play-icon" />
+      </button>
+    </view> -->
+  </view>
+  <button class="pay-button" bindtap="pay">去支付赠送</button>
+</view>

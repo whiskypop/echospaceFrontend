@@ -1,1 +1,156 @@
-/* pages/profile/profile.wxss */
+/* container and background */
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 头部布局 */
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 21px;
+}
+
+/* 头部组件1 */
+.heading-component1 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* 名称 */
+.title {
+  font-size: 36px;
+  color: white;
+  font-weight: bold; /* 加粗文本 */
+}
+
+/* 描述 */
+.description {
+  font-size: 16px;
+  color: #B1B1B1;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* 头部组件2 */
+.heading-component2 {
+  width: 36px; /* 圆形的宽度 */
+  height: 36px; /* 圆形的高度 */
+  background-color: blue; /* 圆形的背景色 */
+  border-radius: 50%; /* 圆形 */
+  margin-right: 18px; /* 右边距 */
+}
+
+/* user info */
+.user-info {
+  display: flex;
+  align-items: center; /* 修改这一行来实现垂直居中 */
+  padding: 18px 21px;
+  background-color: #1a1a1a;
+  border-radius: 20rpx;
+  margin: 0px 21rpx;
+  height: 200px;
+}
+
+.avatar {
+  width: 160px;
+  height: 160px;
+  margin-right: 18px;
+  border-radius: 30px;
+}
+
+.info {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 添加这一行来实现垂直居中 */
+}
+
+.name {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.id, .location {
+  
+  font-size: 24rpx;
+}
+
+.status {
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.gender, .rank, .vip, .achievements {
+  font-size: 24rpx;
+  margin-top: 5rpx;
+  margin-right: 10px;
+}
+
+/* tabs */
+.tabs {
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.tabs text {
+  font-size: 28rpx;
+}
+
+/* sections */
+.section {
+  
+  padding: 18px 21px;
+  background-color: #1a1a1a;
+  border-radius: 16px;
+  margin: 18px 21rpx;
+  
+}
+
+.section-title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+margin-bottom: 10px;
+}
+
+.scroll {
+  display: flex;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.gift-item {
+  display: inline-block;
+  flex-direction: column;
+  align-items: center;
+  margin-right:10px;
+}
+
+.gift-image {
+  width: 115px;
+  height: 115px;
+  border-radius: 16rpx;
+}
+
+.gift-name {
+  text-align: center;
+  font-size: 16rpx;
+  color: #fff;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

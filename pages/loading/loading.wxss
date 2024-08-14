@@ -1,0 +1,21 @@
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+}
+
+.loading-image {
+  width: 400px;
+  height: 400px;
+}
+
+.text {
+  font-size: 20px; /* 设置字体大小 */
+  color: white; /* 设置字体颜色 */
+  margin-top: 10px; /* 设置上边距 */
+}
+
+

@@ -1,22 +1,112 @@
-<view class="container">
-  <view class="search-bar">
-    <text>主页</text>
-    <!-- <view class="search-icon">
-      <image src="/pages/index/images/search.png" alt="search" />
-    </view> -->
+<!-- index.wxml -->
+<view class="page-container">
+  <view class="heading">
+    <view class="heading-component1">
+      <text class="title">主页</text>
+      <text class="description">送TA礼物</text>
+    </view>
+    <video class="toggle-section-button" src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundVideo/toggleSection2.mp4" muted autoplay loop bindtap="toggleSection" controls="{{false}}"></video>
   </view>
-  <view class="grid">
   
-    <view class="grid-item" bindtap="navigateToRecord">记录</view>
-    <view class="grid-item write-song" bindtap="navigateToWrite">写歌</view>
-    <view class="grid-item" bindtap="navigateToChat">AI助手</view>
-  </view>
-  <view class="section">
-    <text>情感碎片</text>
-    <view class="section-grid">
-      <view class="section-item">今天</view>
-      <view class="section-item">今天</view>
+  <view class="bigsection">
+    <view class="section">
+    <!-- <view class="section-header">
+      <view class="section-title">创作礼物</view>
+      <view class="more-modes">More Modes</view>
+    </view> -->
+    <scroll-view class="gift-scroll" scroll-x="true">
+      <view class="gift-card" bindtap="navigateToCustomizeGift">
+        <image class="background-blur"  mode="aspectFill"></image>
+        <view class="gift-content">
+          <view class="gift-title">创作礼物</view>
+          <view class="add-icon">+</view>
+        </view>
+      </view>
+      <view class="gift-card" bindtap="navigateToWrite">
+        <image class="background-blur"  mode="aspectFill"></image>
+        <view class="gift-content">
+          <view class="gift-title">创作音乐礼物</view>
+          <view class="add-icon">+</view>
+        </view>
+      </view>
+    </scroll-view>
+    </view>
+    <view class="section">
+    <view class="section-header">
+      <view class="title-container">
+        <view class="section-title" bind:tap="navigateToYuchen1">礼物包</view>
+        <view class="show-more" bind:tap="navigateToModel">更多模板</view>
+      </view>
+      <view class="section-subtitle" bind:tap="navigateToYuchen2">选择礼物模板一键定制礼物</view>
+    </view>
+    <view class="component2">
+    <view class="column">
+      <view class="subcomponent2-1">
+        <view class="subcomponent2-1-1">
+          <view class="square"></view>
+          <view class="info-container">
+            <view class="info-text">
+              <text class="product-info">商品信息</text>
+              <text class="price">价格</text>
+            </view>
+            <view class="circle"></view> <!-- 替代按钮的圆形 -->
+          </view>
+        </view>
+        <view class="subcomponent2-1-2">
+          <view class="square"></view>
+          <view class="info-container">
+            <view class="info-text">
+              <text class="product-info">商品信息</text>
+              <text class="price">价格</text>
+            </view>
+            <view class="circle"></view> <!-- 替代按钮的圆形 -->
+          </view>
+        </view>
+        <view class="subcomponent2-1-3">
+          <view class="square"></view>
+          <view class="info-container">
+            <view class="info-text">
+              <text class="product-info">商品信息</text>
+              <text class="price">价格</text>
+            </view>
+            <view class="circle"></view> <!-- 替代按钮的圆形 -->
+          </view>
+        </view>
+      </view>
+      <view class="subcomponent2-2">
+        <view class="subcomponent2-2-1">
+          <view class="square"></view>
+          <view class="info-container">
+            <view class="info-text">
+              <text class="product-info">商品信息</text>
+              <text class="price">价格</text>
+            </view>
+            <view class="circle"></view> <!-- 替代按钮的圆形 -->
+          </view>
+        </view>
+        <view class="subcomponent2-2-2">
+          <view class="square"></view>
+          <view class="info-container">
+            <view class="info-text">
+              <text class="product-info">商品信息</text>
+              <text class="price">价格</text>
+            </view>
+            <view class="circle"></view> <!-- 替代按钮的圆形 -->
+          </view>
+        </view>
+        <view class="subcomponent2-2-2">
+          <view class="square"></view>
+          <view class="info-container">
+            <view class="info-text">
+              <text class="product-info">商品信息</text>
+              <text class="price">价格</text>
+            </view>
+            <view class="circle"></view> <!-- 替代按钮的圆形 -->
+          </view>
+        </view>
+      </view>
     </view>
   </view>
-
+    </view>
+  </view>
 </view>

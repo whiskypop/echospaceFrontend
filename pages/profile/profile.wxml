@@ -1,2 +1,54 @@
-<!--pages/profile/profile.wxml-->
-<text>pages/profile/profile.wxml</text>
+<view class="container">
+  <view class="heading">
+    <view class="heading-component1">
+      <text class="title">个人中心</text>
+      <text class="description">我的礼物</text>
+    </view>
+    <view class="heading-component2"></view>
+  </view>
+ 
+
+  <!-- User Information -->
+  <view class="user-info">
+    <image class="avatar" src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundImage/Amy Adams.png" />
+    <view class="info">
+      <text class="name">{{user_info.name}}</text>
+      <text class="id">ID: {{user_info.id}}</text>
+      <text class="location">{{user_info.location}}</text>
+      
+    </view>
+  </view>
+
+  <!-- Tabs -->
+  <view class="tabs">
+    <text>Gifts</text>
+    <text>Music</text>
+    <text>Benefits</text>
+  </view>
+
+  <!-- Received Gifts -->
+  <view class="section">
+    <text class="section-title">I received</text>
+    <scroll-view class="scroll" scroll-x="true">
+      <block wx:for="{{received_gifts}}" wx:key="*this">
+        <view class="gift-item">
+          <image class="gift-image" src="{{item.image}}"  bindtap="navigateToGiftReceiving" data-index="{{index}}"/>
+          <text class="gift-name">{{item.name}}</text>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+
+  <!-- Sent Gifts -->
+  <view class="section">
+    <text class="section-title">I sent</text>
+    <scroll-view class="scroll" scroll-x="true">
+      <block wx:for="{{sent_gifts}}" wx:key="*this">
+        <view class="gift-item">
+          <image class="gift-image" src="{{item.image}}" />
+          <text class="gift-name">{{item.name}}</text>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>

@@ -1,0 +1,216 @@
+<view class="container">
+  <view class="heading">
+    <view class="heading-component1">
+      <text class="title">商场</text>
+      <text class="description">请选择想送TA的礼物</text>
+    </view>
+    <video class="toggle-section-button" src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundVideo/toggleSection2.mp4" muted autoplay loop bindtap="toggleSection" controls="{{false}}"></video>
+  </view>
+
+  <scroll-view class="content" scroll-y>
+    <view class="section {{showSection ? 'show' : ''}}">
+      <text class="label">请描述送礼需求</text>
+      <textarea class="textarea" placeholder="请描述你想表达的内容在这...例如，我想给15岁的儿子送生日礼物" bindinput="inputMood"></textarea>
+      <button class="reference-button" bindtap="navigateToChat">参考</button>
+      <button class="suggest-button" bindtap="suggest">一键推荐</button>
+    </view>
+    <scroll-view scroll-x="true" class="tags-scroll-container">
+        <block wx:for="{{tags}}" wx:key="*this">
+        <button class="tag {{item === selectedTag ? 'selected' : ''}}" bindtap="toggleSelection" data-tag="{{item}}">{{item}}</button>
+        </block>
+    </scroll-view>
+
+    <view class="biggroup2">
+        <view class="group2">
+        <view class="cards-titleall">
+            <text class="cards-title">美食餐饮</text>
+            <view class="cards-subTitle16">丰富美食，无限欢乐</view>
+        </view>
+        <view class="showcard3">
+            <view class="showcard3-1" bind:tap="navigatToYuchen1">
+                <video class="background-video" src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/mall/mallFoodSnacks/guanggao.mp4" autoplay loop muted controls="{{false}}"></video>
+                <view class="text-container">
+                    <text class="effect-description">纵向清凉夏天</text>
+                    <text class="containerName">潮流品牌零食</text>     
+                </view>
+            </view>
+            <view class="product-card-container">
+                <block wx:for="{{displayProducts}}" wx:key="name">
+                    <view class="product-card">
+                        <video class="product-video" src="{{item.video}}" autoplay loop muted controls="{{false}}"></video>
+                        <view class="name-price">
+                            <text class="product-name">{{item.name}}</text>
+                            <text class="product-price">￥{{item.price}}</text>
+                        </view>
+                        <view class="quantity-control">
+                            <button class="quantity-button" bindtap="decreaseQuantity" data-name="{{item.name}}">-</button>
+                            <text class="quantity-text">{{item.quantity}}</text>
+                            <button class="quantity-button" bindtap="increaseQuantity" data-name="{{item.name}}">+</button>
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </view>
+        <view class="showcard2-starbucks">
+            <view class="subshowcard2-2">
+                <view class="subshowcard2-2-1 scroll-container">
+                    <block wx:for="{{starbucksVideos1}}" wx:for-item="video" wx:key="index">
+                        <video class="square-image" src="{{video}}" autoplay loop muted controls="{{false}}"></video>
+                    </block>
+                </view>
+                <view class="subshowcard2-2-2 scroll-container">
+                    <block wx:for="{{starbucksVideos2}}" wx:for-item="video" wx:key="index">
+                        <video class="square-image" src="{{video}}" autoplay loop muted controls="{{false}}"></video>
+                    </block>
+                </view>
+            </view>
+            <view class="subshowcard2-1">
+                <view class="text-container">
+                <text class="effect-description">探索品牌商品</text>
+                <text class="containerName">星巴克</text>
+                </view>
+            </view>
+        </view>
+    </view>
+        <view class="group2">
+        <view class="cards-titleall">
+            <text class="cards-title">美妆护肤</text>
+            <view class="cards-subTitle16">丰富内容，无限欢乐</view>
+        </view>
+        <view class="showcard3">
+            <view class="showcard3-1" bind:tap="navigatToYuchen1">
+                <video class="background-video" src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/mall/mallCosCos/cosIndex.mp4" autoplay loop muted controls="{{false}}"></video>
+                <view class="text-container">
+                    <text class="effect-description">全新夏日妆容</text>
+                    <text class="containerName">化妆品</text>     
+                </view>
+            </view>
+            <view class="product-card-container">
+                <block wx:for="{{displayedCosmetics}}" wx:key="name">
+                    <view class="product-card">
+                        <video class="product-video" src="{{item.video}}" autoplay loop muted controls="{{false}}"></video>
+                        <view class="name-price">
+                            <text class="product-name">{{item.name}}</text>
+                            <text class="product-price">￥{{item.price}}</text>
+                        </view>
+                        <view class="quantity-control">
+                            <button class="quantity-button" bindtap="decreaseQuantity" data-name="{{item.name}}">-</button>
+                            <text class="quantity-text">{{item.quantity}}</text>
+                            <button class="quantity-button" bindtap="increaseQuantity" data-name="{{item.name}}">+</button>
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </view>
+        <view class="showcard2">
+            <view class="subshowcard2-2">
+                <view class="subshowcard2-2-1 scroll-container">
+                    <block wx:for="{{cosFlower1}}" wx:for-item="video" wx:key="index">
+                        <video class="square-image" src="{{video}}" autoplay loop muted controls="{{false}}"></video>
+                    </block>
+                </view>
+                <view class="subshowcard2-2-2 scroll-container">
+                    <block wx:for="{{cosFlower2}}" wx:for-item="video" wx:key="index">
+                        <video class="square-image" src="{{video}}" autoplay loop muted controls="{{false}}"></video>
+                    </block>
+                </view>
+            </view>
+            <view class="subshowcard2-1">
+                <view class="text-container">
+                    <text class="effect-description">月光人鱼共赴深海星夜</text>
+                    <text class="containerName">花知晓</text>
+                </view>
+            </view>
+            
+        </view>
+        </view>
+        <view class="group2">
+        <view class="cards-titleall">
+            <text class="cards-title">为你推荐</text>
+            <view class="cards-subTitle16">根据您的兴趣推荐</view>
+        </view>
+        <view class="showcard3">
+            <view class="showcard3-1" bind:tap="navigatToYuchen1">
+                <video class="background-video" src="https://echospace.blob.core.windows.net/echospaceassets/mall/mall/mallFoodSnacks/wangzai.mp4?sv=2023-01-03&st=2024-08-01T09%3A35%3A31Z&se=2024-08-02T09%3A50%3A31Z&sr=c&sp=r&sig=XZLpyg44ahMGTIrJPRD4EIhvuxreAH5bp21ihPgrn7o%3D" autoplay loop muted controls="{{false}}"></video>
+                <view class="text-container">
+                    <text class="effect-description">描述</text>
+                    <text class="containerName">品牌</text>     
+                </view>
+            </view>
+            <view class="product-card-container">
+                <block wx:for="{{displayedBrands}}" wx:key="name">
+                    <view class="product-card">
+                        <video class="product-video" src="{{item.video}}" autoplay loop muted controls="{{false}}"></video>
+                        <view class="name-price">
+                            <text class="product-name">{{item.name}}</text>
+                            <text class="product-price">￥{{item.price}}</text>
+                        </view>
+                        <view class="quantity-control">
+                            <button class="quantity-button" bindtap="decreaseQuantity" data-name="{{item.name}}">-</button>
+                            <text class="quantity-text">{{item.quantity}}</text>
+                            <button class="quantity-button" bindtap="increaseQuantity" data-name="{{item.name}}">+</button>
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </view>
+        <view class="showcard2">
+            <view class="subshowcard2-2">
+                <view class="subshowcard2-2-1 scroll-container">
+                    <block wx:for="{{starbucksVideos1}}" wx:for-item="video" wx:key="index">
+                        <video class="square-image" src="{{video}}" autoplay loop muted controls="{{false}}"></video>
+                    </block>
+                </view>
+                <view class="subshowcard2-2-2 scroll-container">
+                    <block wx:for="{{starbucksVideos2}}" wx:for-item="video" wx:key="index">
+                        <video class="square-image" src="{{video}}" autoplay loop muted controls="{{false}}"></video>
+                    </block>
+                </view>
+            </view>
+            <view class="subshowcard2-1">
+                <view class="text-container">
+                    <text class="effect-description">定制专属音乐</text>
+                    <text class="containerName">酷炫音乐</text>
+                </view>
+            </view>
+        </view>
+        </view>
+  </view>
+    
+    <view class="popup" wx:if="{{showPopup}}">
+      
+      <swiper class="swiper" autoplay="false" indicator-dots="true">
+          <swiper-item bindtap="showPopup">
+            <image src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundImage/brandZone.jpg" class="slider-image"></image>
+          </swiper-item>
+          <!-- Add more swiper items as needed -->
+          <view class="subTitle">品牌专题</view>
+          <view class="title2">品牌专题</view>
+          <view class="close-button" bindtap="closePopup">×</view>
+      </swiper>
+      <scroll-view class="popup-content" scroll-y>
+        <block wx:for="{{currentProducts}}" wx:key="index">
+          <view class="product-item">
+            <video class="product-video" src="{{item.video}}" muted autoplay loop controls="{{false}}"></video>
+            <view class="product-info">
+              <text class="product-name">{{item.name}}</text>
+              <text class="product-price">￥{{item.price}}</text>
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </scroll-view>
+  
+  <view class="cart-info">
+    <view class="money-detail">
+        <text class="cards-subTitledetail">明细</text>
+        <text class="cards-subTitledetail">￥{{totalPrice}}</text>
+    </view>
+    <view class="button-container ">
+        <button class="create-button" bindtap="navigateToYuchen2">下一步</button>
+    </view>
+  </view>
+ 
+</view>
+  

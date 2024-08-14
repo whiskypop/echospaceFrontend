@@ -1,96 +1,377 @@
-/* index.wxss */
-.container {
+.page-container {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding: 20px; /* 添加一些内边距以使内容不紧靠屏幕边缘 */
-  width: 100%;
-  background-color: #ffffff;
 }
 
-.search-bar {
+/* 头部布局 */
+.heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-bottom: 20px;
-  background-color: #f8f8f8;
-  border-bottom: 1px solid #ddd;
+  padding: 21px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  row-gap: 20px; /* 行之间的间距 */
-  column-gap: 20px; /* 列之间的间距 */
-  width: 100%;
-  margin-bottom: 30px; /* 使内容与接下来的情感碎片块之间之间保持距离 */
-}
-
-.grid-item {
+/* 头部组件1 */
+.heading-component1 {
   display: flex;
-  justify-content: center;
+  gap: 10px;
   align-items: center;
-  min-height: 100px; /* 添加最小高度以保持一致的块大小 */
-  background-color: #f0f0f0;
-  border-radius: 8px;
-  text-align: center;
-  font-size: 18px;
 }
 
-.write-song {
-  min-height: 140px; /* 保持与其他卡片一致的高度 */
+/* 名称 */
+.title {
+  font-size: 36px;
+  color: white;
+  font-weight: bold; /* 加粗文本 */
 }
 
+/* 描述 */
+.description {
+  font-size: 16px;
+  color: #B1B1B1;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.toggle-section-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Makes it circular */
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 18px;
+}
+/* Settings icon */
+.settings-icon {
+  width: 24px;
+  height: 24px;
+  background-image: url('cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundImage/Vector.png');
+  background-size: cover;
+}
+
+.bigsection {
+  margin: 0px 21px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+/* Section headers */
 .section {
+
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+
+/* 组件 2 */
+.component2 {
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+/* 列 */
+.column {
+  display: flex;
+  flex-direction: row; /* 改为水平排列 */
+  gap: 10px;
+}
+
+/* 子组件 2-1 */
+.subcomponent2-1,
+.subcomponent2-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* 子组件 2-1-1 */
+.subcomponent2-1-1,
+.subcomponent2-1-2,
+.subcomponent2-1-3,
+.subcomponent2-2-1,
+.subcomponent2-2-2 {
+  width: 189px;
+  height: auto; /* 高度自动调整 */
+  background-color: #161616;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+/* 蓝色正方形 */
+.square {
+  width: 189px;
+  height: 189px;
+  background-color: blue;
+  border-radius: 10px;
+}
+
+/* 信息容器 */
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  
+  padding: 7px 10px;
+}
+
+/* 信息文本 */
+.info-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-info {
+  color: white;
+  font-size: 16px;
+}
+
+.price {
+  color: gray;
+  font-size: 10px;
+}
+/* 蓝色圆形 */
+.circle {
+  width: 20px; /* 宽度 */
+  height: 20px; /* 高度 */
+  background-color: blue; /* 背景颜色 */
+  border-radius: 50%; /* 圆形 */
+  display: flex; /* 使用 flex 布局 */
+  justify-content: center; /* 水平居中对齐 */
+  align-items: center; /* 垂直居中对齐 */
+}
+
+
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .section-title {
-  margin-bottom: 10px;
-  font-size: 20px; /* 更大字体显示标题 */
+  font-size: 26px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: left;
+  color: white;
 }
 
-.section-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.section-item {
-  height: 100px;
-  background-color: #f0f0f0;
-  border-radius: 8px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px; /* 与其他卡片保持一致 */
-}
-
-.navbar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding-bottom: env(safe-area-inset-bottom);
-  height: 50px;
-  background-color: #f8f8f8;
-  border-top: 1px solid #ddd;
-}
-
-.nav-item {
-  flex-grow: 1;
-  text-align: center;
-  padding: 10px;
-  font-size: 16px;
+.show-more {
+  margin-right: 4px;
+  font-size: 14px;
   color: #888;
 }
 
-.nav-item.active {
-  color: #000;
+.section-subtitle {
+  color: #BABABA;
+  font-size: 16px;
+  text-align: left;
+  line-height: 25px;
+}
+
+
+
+
+/* Gift cards */
+.gift-scroll {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  gap: 18px;
+  white-space: nowrap;
+  height: auto; /* 高度跟随素材 */
+}
+
+.gift-card {
+  display: inline-block;
+  position: relative;
+  width: 310px; /* Adjust width */
+  height: 130px;
+  background: linear-gradient(90deg, 
+    #E631FF 0%, 
+    #AF2CF9 21%, 
+    #6726F2 50%, 
+    #1A8DF6 73%, 
+    #32C9FC 100%
+  );
+  border-radius: 12px;
+  margin-right: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 21px;
+}
+
+.background-blur {
+  position: absolute;
+  
+  background-size: cover;
+  background-position: center;
+
+  opacity: 0.1;
+  }
+  
+  .gift-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 垂直居中 */
+    
+    position: relative;
+    z-index: 1;
+    padding: 16px;
+    color: white;
+    height: 100%; /* 确保父元素具有明确的高度 */
+  }
+  
+  
+  .gift-title {
+  font-size: 30px; /* Adjust font size */
+  font-weight: bold;
+  
+  }
+  
+  .add-icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 54px;
+    color: #ccc;
+  }
+  
+  
+.formwork {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 8px;
+}
+.formwork-Column {
+  width: 45vw;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+.gift-popup-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.video-container {
+  width: 100%;
+  padding-top: 98%; /* 保持1:1宽高比 */
+  position: relative;
+}
+
+.gift-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover; 
+}
+.video-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%; /* 控制叠加层的高度 */
+  background-image: linear-gradient(to top, rgba(28, 28, 30, 1), rgba(28, 28, 30, 0.6), rgba(28, 28, 30, 0)); /* 1C1C1E渐变色 */
+  pointer-events: none; /* 使覆盖层不接收点击事件 */
+}
+.overlay-text {
+  display: flex;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* 可选的文字阴影效果 */
+  text-align: left;
+  margin-left: 23px;
+}
+.overlay-subtext {
+  display: flex;
+  text-align: left;
+  font-size: 15px;
+  margin-top: 4px;
+  margin-left: 23px;
+  color: rgb(185, 183, 183);
+}
+.product-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0px;
+  padding: 18px 23px;
+  /* border-radius: 15px; */
+  background-color: #1B1C1F;
+  /* box-shadow: 1px 1px 2px rgba(255, 254, 254, 0.6); */
+}
+.product-image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 15rpx;
+}
+.product-info {
+  color: white;
+  flex: auto;
+  
+  text-align: left;
+}
+
+.product-name {
+  font-size: 16px;
   font-weight: bold;
 }
+
+.product-price {
+  text-align: left;
+  font-size: 15px;
+  color: rgb(185, 183, 183);
+}
+
+.get-button {
+  flex: 0 1 20%;
+  background-color: #ECECEC;
+  color: #382286a1;
+  border: none;
+  border-radius: 15px;
+  padding: 10rpx 20rpx;
+  font-size: 24rpx;
+  margin-right: 10px;
+}
+
+  
+  
+  
+

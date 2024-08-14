@@ -2,17 +2,32 @@
   "pages": [
     "pages/index/index",
     "pages/write/write",
-    "pages/community/community",
     "pages/profile/profile",
     "pages/chat/chat",
-    "pages/audioPlayer/audioPlayer"
+    "pages/musicPlay/musicPlay",
+    "pages/loading/loading",
+    "pages/gift/gift",
+    "pages/music/music",
+    "pages/preview/preview",
+    "pages/share/share",
+    "pages/giftReceiving/giftReceiving",
+    "pages/customizeGift/customizeGift",
+    "pages/onlyGifts/onlyGifts",
+    "pages/list/list",
+    "pages/mall/mall",
+    "pages/giftReceivingWithPhoto/giftReceivingWithPhoto",
+    "pages/model/model",
+    "pages/yuchen1/yuchen1",
+    "pages/yuchen2/yuchen2"
   ],
-  "requiredBackgroundModes": ["audio"],
+  "requiredBackgroundModes": [
+    "audio"
+  ],
   "useExtendedLib": {
-    "weui":true
+    "weui": true
   },
   "usingComponents": {
-    "chat-box":"components/chatbox/index",
+    "chat-box": "components/chatbox/index",
     "mp-actionSheet": "weui-miniprogram/actionsheet/actionsheet"
   },
   "window": {
@@ -22,15 +37,23 @@
     "navigationBarTitleText": "EchoSpace",
     "navigationBarTextStyle": "black"
   },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "style": "v2",
   "sitemapLocation": "sitemap.json",
+  "libVersion": "2.18.1",
+  "share": true,
   "networkTimeout": {
     "request": 60000,
     "downloadFile": 60000
   },
   "tabBar": {
-    "color": "#000000",
-    "selectedColor": "#1aad19",
-    "backgroundColor": "#ffffff",
+    "color": "#ffffff",
+    "selectedColor": "#E631FF",
+    "backgroundColor": "#000000",
     "borderStyle": "black",
     "list": [
       {
@@ -40,20 +63,20 @@
         "selectedIconPath": "icon/home-selected.png"
       },
       {
-        "pagePath": "pages/write/write",
-        "text": "写歌",
+        "pagePath": "pages/list/list",
+        "text": "创意",
         "iconPath": "icon/write.png",
         "selectedIconPath": "icon/write-selected.png"
       },
       {
-        "pagePath": "pages/community/community",
-        "text": "社区",
-        "iconPath": "icon/community.png",
-        "selectedIconPath": "icon/community-selected.png"
+        "pagePath": "pages/customizeGift/customizeGift",
+        "text": "商品商城",
+        "iconPath": "icon/mall.png",
+        "selectedIconPath": "icon/mall-selected.png"
       },
       {
         "pagePath": "pages/profile/profile",
-        "text": "我的",
+        "text": "Profile",
         "iconPath": "icon/profile.png",
         "selectedIconPath": "icon/profile-selected.png"
       }

@@ -1,0 +1,42 @@
+<view class="container">
+  <image class="background" src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundImage/giftBackground.png"></image>
+  <view class="header">
+    <button class="back-button" bindtap="navigateBack">back</button>
+    <text class="title">Gift Packaging...</text>
+    <button class="more-button">more</button>
+  </view>
+  <view class="content">
+    <!-- 显示音频信息的方框 -->
+    <view class="audio-box">
+      <image src="{{ audioInfo[0].image_url }}" mode="left" class="cover-image"></image>
+      <text class="song-title">{{ audioInfo[0].title }}</text>
+      <!-- 歌词滚动显示 -->
+      <scroll-view class="lyric-scroll" scroll-y="true">
+        <text class="lyric">{{ audioInfo[0].lyric }}</text>
+      </scroll-view>
+      <button class="play-button" bindtap="togglePlay">{{ isPlaying ? 'pause' : 'play' }}</button>
+    </view>
+
+    <!-- 礼物权益 -->
+    <view class="benefits-section">
+      <text class="section-title">礼物权益</text>
+      <scroll-view class="benefits-scroll" scroll-x="true">
+        <image src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundImage/benefits.png" class="benefit-image"></image>
+        <image src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundImage/benefits.png" class="benefit-image"></image>
+        <image src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundImage/benefits.png" class="benefit-image"></image>
+      </scroll-view>
+    </view>
+
+    <!-- 包装效果 -->
+    <view class="packaging-section">
+      <text class="section-title">包装效果</text>
+      <scroll-view class="packaging-scroll" scroll-x="true">
+        <image src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundImage/package.png" class="packaging-image"></image>
+        <image src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundImage/package.png" class="packaging-image"></image>
+        <image src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundImage/package.png" class="packaging-image"></image>
+      </scroll-view>
+    </view>
+    <!-- 底部预览按钮 -->
+    <button class="preview-button">preview</button>
+  </view>
+</view>

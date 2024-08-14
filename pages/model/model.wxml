@@ -1,0 +1,34 @@
+<view class="container">
+  <view class="component1">
+    <view class="subcomponent1-2">
+      <view class="subcomponent1-2-1">
+        <view class="square"></view>
+        <view class="square"></view>
+        <view class="square"></view>
+        <view class="square"></view>
+      </view>
+      <view class="subcomponent1-2-2">
+        <view class="square"></view>
+        <view class="square"></view>
+        <view class="square"></view>
+        <view class="square"></view>
+      </view>
+    </view>
+    <view class="subcomponent1-1">
+      <view class="text-container">
+        <text class="subtitle">来自爸爸的礼物</text>
+        <text class="title">儿子生日快乐！</text>
+      </view>
+      <view class="button-container">
+        <button class="button">一键拆开</button>
+      </view>
+    </view>
+  </view>
+  <view class="component2">
+    <view class="subcomponent2-1"></view>
+    <view class="subcomponent2-2">
+      <view class="square"></view>
+      <view class="square"></view>
+    </view>
+  </view>
+</view>

@@ -64,20 +64,38 @@ const cx = Component({
     initMessageHistory() {
       var that = this;
       app.globalData.cht = that
-      that.setData({
-        chatList: [
-          {
-            "type":"man",
-            "avatarUrl":"image/user.jpeg",   
-            "content":"你好，ChatGpt",
-          },
-          {
-            "type":"robot",
-            "avatarUrl":"image/openai-avatar.png",
-            "content":"你好！有什么问题我可以帮忙解答吗？欢迎随时向我提问。",
-          }
-        ]
-      })
+      const fileList = [
+        'cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundImage/Amy.png',
+        'cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundImage/echo.png'
+      ];
+      wx.cloud.getTempFileURL({
+        fileList: fileList,
+        success: res => {
+          const manAvatarUrl = res.fileList[0].tempFileURL;
+          const robotAvatarUrl = res.fileList[1].tempFileURL;
+    
+          console.log('Man Avatar URL:', manAvatarUrl);
+          console.log('Robot Avatar URL:', robotAvatarUrl);
+    
+          that.setData({
+            chatList: [
+              {
+                type: 'man',
+                avatarUrl: manAvatarUrl,
+                content: 'Hello, echoSpace!',
+              },
+              {
+                type: 'robot',
+                avatarUrl: robotAvatarUrl,
+                content: "Hello, I'm glad to hear you share your story. I'll help you express your emotions.",
+              }
+            ]
+          });
+        },
+        fail: err => {
+          console.error('getTempFileURL fail:', err);
+        }
+      });
     },
     
   }

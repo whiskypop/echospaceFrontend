@@ -1,0 +1,133 @@
+.container {
+  padding: 20rpx;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* 将背景图片放在底层 */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4; 
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10rpx 0rpx;
+}
+
+.back-button,
+.more-button {
+  background: none;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+}
+
+.title {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.content {
+  z-index: 1; /* 确保内容显示在背景图片之上 */
+  width: 100%;
+}
+
+.audio-box {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 20rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  backdrop-filter: blur(10px); /* 背景模糊效果 */
+  margin: 20rpx 0;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center; 
+  align-items: center; /* 垂直居中 */
+  /* padding-top: 20rpx; 添加顶部内边距 */
+}
+
+.cover-image {
+  width: 250rpx; /* 设置图片宽度 */
+  height: 250rpx; /* 设置图片高度 */
+  border-radius: 20rpx;
+  flex-shrink: 0; /* 防止图片缩小 */
+}
+
+.play-button {
+  position: absolute; /* 开启绝对定位 */
+  bottom: 10rpx; /* 与底部的距离 */
+  right: 10rpx; /* 与右边的距离 */
+  width: 20%;
+  height: 30%;
+  padding: 10rpx 20rpx;
+  background-color: rgba(21, 0, 97, 0.6);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  border-radius: 20rpx;
+}
+
+.song-title {
+  position: absolute; /* 开启绝对定位 */
+  top: 20rpx; /* 与顶部的距离 */
+  left: 280rpx; /* 与左边的距离 */
+  font-size: 20px;
+  font-weight: bolder;
+  color: #333;
+  flex-grow: 1; /* 让标题根据空间自动调整 */
+  overflow: hidden; /* 防止标题溢出 */
+  /* 防止标题换行 */
+  white-space: nowrap; 
+  text-overflow: ellipsis; /* 当标题太长时显示省略号 */
+}
+
+.lyric-scroll {
+  height: 120rpx; /* 设置滚动区域的高度 */
+}
+
+.benefits-section,
+.packaging-section {
+  margin-bottom: 20rpx;
+  color: #1B1C1F;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  margin-bottom: 10rpx;
+}
+
+.benefits-scroll,
+.packaging-scroll {
+  display: flex;
+  overflow-x: scroll;
+}
+
+.benefit-image,
+.packaging-image {
+  width: 230rpx;
+  height: 230rpx;
+  border-radius: 20rpx;
+  margin-right: 10rpx;
+}
+
+.preview-button {
+  width: 100%;
+  padding: 20rpx 0;
+  background-color: #851037be;
+  color: #fff;
+  text-align: center;
+  border-radius: 20rpx;
+  font-size: 20px;
+  font-weight: bolder;
+  margin-top: 20rpx;
+}

@@ -1,0 +1,370 @@
+.page-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 头部布局 */
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 21px;
+}
+
+/* 头部组件1 */
+.heading-component1 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* 名称 */
+.title {
+  font-size: 36px;
+  color: white;
+  font-weight: bold; /* 加粗文本 */
+}
+
+/* 描述 */
+.description {
+  font-size: 16px;
+  color: #B1B1B1;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.toggle-section-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Makes it circular */
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 18px;
+}
+.biggroup, .biggroup2{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.group, .group2{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 10px;
+}
+.cards-titleall {
+  display: flex;
+  flex-direction: column;
+  
+  margin: 0px 21px 0px 21px;
+}
+
+.cards-title {
+  font-size: 26px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: left;
+  color: white;
+
+ 
+}
+.cards-subTitle16 {
+  color: #BABABA;
+  font-size: 16px;
+  text-align: left;
+  line-height: 25px;
+  
+}
+/* 组件1 */
+.showcard1 {
+  display: flex;
+  flex-direction: column;
+  width: 387px;
+  height: 475px;
+  background-color: #1C1C1E;
+  margin: 0px 21px 0px 21px;
+  border-radius: 16px;
+}
+
+/* 子组件1-1 */
+.subshowcard1-1 {
+  display: flex;
+  flex-direction: column; /* 竖直排列内容 */
+  background-color: #FFC0CB;
+  width: 100%; /* 确保子组件宽度与父容器一致 */
+  height: 387px;
+  border-radius: 16px;
+  padding: 18px 21px;
+}
+
+/* 新添加的容器 */
+.content-container {
+  display: flex;
+  justify-content: space-between; /* 水平排列 */
+  align-items: flex-end; /* 垂直底部对齐 */
+  width: 100%;
+  height: 100%; /* 使容器填满子组件1-1 */
+}
+
+/* 文本容器 */
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+/* 产品名 */
+.product-name {
+  font-size: 30px;
+  color: #FFFFFF;
+  font-weight: bold;
+  line-height: 44px;
+}
+
+/* 动效描述 */
+.effect-description {
+  font-size: 16px;
+  color: #808080;
+  font-weight: bold;
+}
+
+/* 按钮容器 */
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* 水平方向右对齐 */
+  align-items: center; /* 垂直居中 */
+  margin-right: 10px; /* 调整右边距，使其靠右 */
+  width: 115px;
+  height: 37px;
+}
+
+/* 应用按钮 */
+.apply-button {
+  background: linear-gradient(90deg, 
+    #E631FF 0%, 
+    #AF2CF9 21%, 
+    #6726F2 50%, 
+    #1A8DF6 73%, 
+    #32C9FC 100%);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 115px !important;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0;
+  box-sizing: border-box;
+  height: 37px;
+}
+
+/* 子组件1-2 */
+.subshowcard1-2 {
+  display: flex;
+  justify-content: space-between;
+  margin: 18px 21px;
+}
+
+/* 蓝色正方形 */
+.blue-square {
+  width: 53px;
+  height: 53px;
+  background-color: #0000FF;
+  border-radius: 12px;
+}
+
+.showcard2 {
+  width: 387px;
+  height: 475px;
+  margin: 0px 21px 0px 21px;
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 16px; 
+}
+
+.subshowcard2-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  padding: 18px 21px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* 保证文本容器内的内容向下对齐 */
+}
+
+
+.subtitle {
+  color: #BABABA;
+  font-size: 16px;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.title {
+  font-size: 36px;
+  color: white;
+  font-weight: bold;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-right: 10px;
+  width: 115px;
+  height: 37px;
+}
+
+.button {
+  background: linear-gradient(90deg, 
+    #E631FF 0%, 
+    #AF2CF9 21%, 
+    #6726F2 50%, 
+    #1A8DF6 73%, 
+    #32C9FC 100%
+  );
+  color: white;
+  border: none;
+  border-radius: 25px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 115px !important;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0;
+  box-sizing: border-box;
+  height: 37px;
+}
+
+
+.subshowcard2-2 {
+  width: 593px;
+  height: 248px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.subshowcard2-2-1, .subshowcard2-2-2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 18px;
+  
+  width: 511px;
+  gap: 18px; /* 添加间距 */
+}
+.subshowcard2-2-1 {
+  margin-left: 30px;
+}
+.subshowcard2-2-2 {
+  margin-left: 125px;
+}
+
+.square {
+  position: relative; /* 使子元素相对于父元素定位 */
+  width: 115px;
+  height: 115px;
+  background-color: blue;
+  border-radius: 16px;
+  overflow: hidden; /* 防止子元素溢出 */
+}
+.video-element {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 确保视频覆盖整个容器 */
+  border-radius: 16px; /* 根据需要设置圆角 */
+  pointer-events: none; /* 禁用视频的鼠标事件 */
+}
+
+
+.showcard3 {
+  width: 387px;
+  height: 475px;
+  margin: 0px 21px 0px 21px;
+  background-color: pink;
+  display: flex;
+  flex-direction: column;
+  
+  border-radius: 16px; 
+}
+.showcard3-1 {
+  width: 387px;
+  height: 195px;
+  background-color: #1e90ff;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* 使内容向下对齐 */
+}
+
+
+.showcard3-2 {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 4px;
+  border-radius: 16px;
+}
+
+.subcomponent3-1-1 {
+  position: absolute;
+  color: white;
+}
+
+.subcomponent3-2-1, .subcomponent3-2-2, .subcomponent3-2-3 {
+  display: flex;
+  align-items: center;
+  padding: 18px 21px;
+  background-color: #f0f0f0;
+  border-radius: 16px;
+}
+
+.subcomponent3-2-1-1, .subcomponent3-2-2-1, .subcomponent3-2-3-1 {
+  width: 53px;
+  height: 53px;
+  background-color: #1e90ff;
+  border-radius: 16px;
+}
+
+.subcomponent3-2-1-2, .subcomponent3-2-2-2, .subcomponent3-2-3-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 16px;
+}
+
+
+.subcomponent3-2-1-2 .name, .subcomponent3-2-2-2 .name, .subcomponent3-2-3-2 .name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.subcomponent3-2-1-2 .price, .subcomponent3-2-2-2 .price, .subcomponent3-2-3-2 .price {
+  font-size: 14px;
+  color: #888;
+}

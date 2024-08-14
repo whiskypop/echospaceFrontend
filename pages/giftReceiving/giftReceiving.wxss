@@ -1,0 +1,460 @@
+/* 新增的两个小组件样式 */
+.new-widgets-section {
+  display: flex;
+  justify-content: space-around;
+  margin: 0px 0;
+}
+
+.new-widget {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.widget-image1 {
+  width: 100%;
+  border-radius: 28px;
+  object-fit: cover;
+}
+.widget-video {
+  width: 100%;
+  height: 100%;
+  border-radius: 28px;
+  object-fit: cover;
+}
+
+.widget-title {
+  margin-top: 10px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 13px; /* 根据需要调整字体大小 */
+}
+
+/* container */
+.container {
+  background-color: black;
+  color: white;
+  padding: 16px;
+  min-height: 100vh;
+}
+
+/* header */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  position: relative;
+}
+
+
+.title {
+  font-size: 32px; /* 调整字体大小为32px */
+  line-height: 34px;
+  font-weight: bold;
+  /* padding: -10px; */
+  margin-top: -10px;
+}
+
+.save {
+  font-size: 16px;
+  line-height: 38px;
+  font-weight: semibold;
+  color: #ffffff;
+  position: absolute;
+  right: 16px;
+  top: 40px;
+}
+
+/* content */
+.content {
+  margin-top: 0px;
+}
+
+/* section */
+.section {
+  margin-bottom: 0px;
+  background-color: #000000;
+  border-radius: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 0px 15px;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
+  padding-left: 140px;
+}
+
+/* music card */
+.music-card {
+  position: relative;
+  /* display: flex; */
+  align-items: center;
+  margin-left: -10px;
+  margin-right: -10px;
+  padding:10px;
+  border-radius: 30px;
+  background-color: #343434;
+  overflow: hidden;
+  
+}
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: blur(15px);
+  /* z-index: -1; */
+  opacity: 0.5;
+}
+.music-card .content {
+  position: relative;
+  z-index: 1;
+  align-items: center;
+}
+
+.music-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 25px;
+  /* position: absolute; */
+  top: 0px;
+  left:10px;
+}
+
+.music-info {
+  /* margin-left: 120px; */
+}
+
+.music-title {
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  left: 140px;
+  top: 10px;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 140px); /* Ensure it doesn't overflow the container */
+}
+
+
+
+.lyric-scroll {
+  max-height: 40px; /* 设置最大高度 */
+  padding: 10px;
+}
+
+.lyric {
+  display: block; /* 将歌词文本元素设置为块级元素 */
+  text-align: center; /* 设置歌词文本左对齐 */
+}
+
+
+.music-controls {
+  margin-top: 10px;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+}
+
+.time {
+  width: 50px;
+  text-align: center;
+}
+
+.custom-slider {
+  flex: 1;
+  margin: 0 10px;
+}
+
+
+.play-button {
+  position: absolute;
+  right: -30px;
+  bottom: 20px; /* Adjust as needed */
+  background: none;
+  border: none;
+}
+
+.play-icon {
+  width: 44px;
+  height: 44px;
+}
+
+.expand-button {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: auto !important;
+  background-color: rgba(231, 228, 228, 0.336); /* 设置背景透明 */
+  border-radius: 15px;
+}
+
+/* benefits and packages */
+.benefits-section{
+  margin-bottom: 10px;
+  background-color: #1B1C1F;
+  border-radius: 15px;
+  margin-left: 10px;
+  margin-right: 10px; /* 增加右侧空白 */
+  margin-top: 0px;
+  padding: 10px; /* 增加填充以留出空间 */
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  margin-bottom: 10rpx;
+  padding-left: 10px;
+}
+
+.benefits-scroll{
+  display: flex;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.benefit-item {
+  display: inline-block;
+  text-align: center;
+  margin-right: 30rpx;
+  margin-top: 20px;
+}
+
+.benefit-video {
+  width: 80px;
+  height: 80px;
+  border-radius: 8.61px;
+  padding: 0px;
+}
+
+.benefit-details {
+  color: #fff;
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.benefit-price {
+  margin-top: 5px;
+}
+
+.benefit-quantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rpx;
+  font-size: 12px;
+}
+
+.benefit-quantity button {
+  width: 20px !important;
+  height: 20px !important;
+  color: #fff;
+  background-color: #3A3B3F;
+  border: none;
+  border-radius: 50% !important;
+  text-align: center;
+  /* line-height: 20px !important; */
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  margin: 0 10rpx;
+}
+
+/* 弹窗样式 */
+.gift-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(49, 47, 47, 0.85);
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 80%;
+  max-height: 80%;
+  overflow: auto;
+  z-index: 9999;
+  display: none; /* 默认隐藏 */
+}
+
+.gift-popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.gift-video {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  /* 去除旋转动画 */
+}
+
+
+.gift-description {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 40px;
+  margin-bottom: 0px; /* 添加底部间距 */
+}
+
+.gift-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.gift-controls .play-button {
+  margin-right: 56px;
+  margin-bottom: 30px; /* 添加底部间距 */
+}
+/* 调整播放按钮大小 */
+.play-button {
+  background: none;
+  border: none;
+}
+
+.play-icon {
+  width: 30px; /* 调整播放图标宽度 */
+  height: 30px; /* 调整播放图标高度 */
+}
+
+.gift-controls .gift-description {
+  color: white;
+}
+
+/* 条形码图片样式 */
+.barcode-image {
+  width: 60%;
+  margin: 20px 0; /* 上下间距 */
+  object-fit: contain;
+}
+
+.gift-close-button {
+  margin-top: 40px; /* 为关闭按钮添加一些顶部间距 */
+  background-color: rgb(255, 255, 255, 0.7); /* 白色背景 */
+  color: rgb(0, 0, 0); /* 黑色文字 */
+  padding: 5px 30px; /* 增加按钮内边距 */
+  border: none;
+  border-radius: 5px; /* 添加圆角 */
+  font-size: 18px; /* 增大字体 */
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.show-popup {
+  display: block; /* 控制弹窗显示 */
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg); /* 从0度开始旋转 */
+  }
+  to {
+    transform: rotate(360deg); /* 旋转360度 */
+  }
+}
+
+
+/* footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+
+.share-button {
+  background: linear-gradient(90deg, 
+    #E631FF 0%, 
+    #AF2CF9 21%, 
+    #6726F2 50%, 
+    #1A8DF6 73%, 
+    #32C9FC 100%
+  );
+  color: white;
+  padding: 10px 20px;
+  border-radius: 15px;
+  text-align: center;
+  line-height: 140%;
+  width: 50%;
+  font-size: 18px;
+  font-weight: bold;
+  position: fixed; /* 固定在底部 */
+  bottom: 10px; /* 距离底部0 */
+  left: 120px; /* 距离左边0 */
+  z-index: 1000; /* 确保在最上层 */
+}
+
+.share-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(8, 8, 8, 0.8) !important;
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); */
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 1000;
+  width: 70%; /* 调整弹窗宽度 */
+  max-width: 400px; /* 设置弹窗的最大宽度 */
+  height: 40%; /* 自动调整高度 */
+  max-height: 50%; /* 设置弹窗的最大高度 */
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.share-image {
+  width: 100%;
+  height: auto;
+  max-width: 300px; /* 确保图片不会过大 */
+  margin: 0 auto;
+}
+
+.close-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: transparent;
+  color: white;
+  font-size: 45px;
+  border-radius: 5px;
+}
+
+/* 模糊背景 */
+.blur-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  z-index: 999;
+  display: none;
+}

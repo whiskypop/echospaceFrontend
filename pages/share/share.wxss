@@ -1,0 +1,25 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.full-screen-image {
+  width: 100%;
+  height: 105%;
+  object-fit: cover;
+}
+
+.navigate-button {
+  position: absolute;
+  bottom: 670px;
+  left: 70%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+}
