@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/customizeGift/customizeGift",
     "pages/index/index",
     "pages/write/write",
     "pages/profile/profile",
@@ -11,7 +12,6 @@
     "pages/preview/preview",
     "pages/share/share",
     "pages/giftReceiving/giftReceiving",
-    "pages/customizeGift/customizeGift",
     "pages/onlyGifts/onlyGifts",
     "pages/list/list",
     "pages/mall/mall",

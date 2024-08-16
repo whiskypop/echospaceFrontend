@@ -53,12 +53,12 @@
         </view>
         <view class="showcard2-starbucks">
             <view class="subshowcard2-2">
-                <view class="subshowcard2-2-1 scroll-container">
+                <view class="subshowcard2-2-1">
                     <block wx:for="{{starbucksVideos1}}" wx:for-item="video" wx:key="index">
                         <video class="square-image" src="{{video}}" autoplay loop muted controls="{{false}}"></video>
                     </block>
                 </view>
-                <view class="subshowcard2-2-2 scroll-container">
+                <view class="subshowcard2-2-2">
                     <block wx:for="{{starbucksVideos2}}" wx:for-item="video" wx:key="index">
                         <video class="square-image" src="{{video}}" autoplay loop muted controls="{{false}}"></video>
                     </block>
@@ -82,7 +82,7 @@
                 <video class="background-video" src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/mall/mallCosCos/cosIndex.mp4" autoplay loop muted controls="{{false}}"></video>
                 <view class="text-container">
                     <text class="effect-description">全新夏日妆容</text>
-                    <text class="containerName">化妆品</text>     
+                    <text class="containerName">化妆品</text>
                 </view>
             </view>
             <view class="product-card-container">
@@ -213,4 +213,3 @@
   </view>
  
 </view>
-  

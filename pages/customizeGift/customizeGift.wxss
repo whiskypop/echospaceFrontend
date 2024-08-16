@@ -494,6 +494,7 @@ height: 37px;
 }
 
 .subshowcard2-2 {
+  overflow: hidden;
   width: 387px;
   height: 248px;
   display: flex;
@@ -512,14 +513,32 @@ height: 37px;
   gap: 18px; /* 添加间距 */
 }
 
+@keyframes scroll-left-right {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-50px); /* 向左移动100px */
+  }
+  50% {
+    transform: translateX(0); /* 回到起点 */
+  }
+  75% {
+    transform: translateX(50px); /* 向右移动100px */
+  }
+  100% {
+    transform: translateX(0); /* 回到起点 */
+  }
+}
+
 .subshowcard2-2-1 {
   margin-left: 0px;
-  animation: scroll-left 30s linear infinite;
+  animation: scroll-left-right 10s linear infinite;
 }
 
 .subshowcard2-2-2 {
-  padding-left: 95px;
-  animation: scroll-left 40s linear infinite;
+  padding-left: 20px;
+  animation: scroll-left-right 10s linear infinite;
 }
 @keyframes scroll-left {
   from {
@@ -545,7 +564,6 @@ height: 37px;
   background-color: #2C2C2E;
   display: flex;
   flex-direction: column;
-  
   border-radius: 16px; 
 }
 .showcard3-1 {
@@ -612,15 +630,17 @@ height: 37px;
   
   .quantity-control {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
     width: auto; 
     margin-right: 0px !important;
+    margin-left: 40px;
   }
   .quantity-button {
-    flex: 0;
     /* height: 20px; */
-    width: 20px !important;
+    padding: 0;
+    width: 30px !important;
+    height: 30px;
     background-color: #ECECEC;
     color: #382286a1;
     border: none;
