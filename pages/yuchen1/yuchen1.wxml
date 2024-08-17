@@ -1,5 +1,8 @@
 <view class="container">
   <view class="component1">
+    <view class="back" bind:tap="goback">
+      <image class="back-icon" src="/icon/back.png" mode="scaleToFill"></image>
+    </view>
     <view class="subcomponent1-1">
       <view class="text-container">
         <text class="subtitle">副标题</text>

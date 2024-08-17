@@ -1,9 +1,12 @@
 {
   "pages": [
-    "pages/list/list",
-    "pages/index/index",
-    "pages/customizeGift/customizeGift",
+    "pages/onlyGifts/onlyGifts",
     "pages/write/write",
+    "pages/index/index",
+    "pages/yuchen1/yuchen1",
+    "pages/yuchen2/yuchen2",
+    "pages/list/list",
+    "pages/customizeGift/customizeGift",
     "pages/profile/profile",
     "pages/chat/chat",
     "pages/musicPlay/musicPlay",
@@ -13,12 +16,9 @@
     "pages/preview/preview",
     "pages/share/share",
     "pages/giftReceiving/giftReceiving",
-    "pages/onlyGifts/onlyGifts",
     "pages/mall/mall",
     "pages/giftReceivingWithPhoto/giftReceivingWithPhoto",
-    "pages/model/model",
-    "pages/yuchen1/yuchen1",
-    "pages/yuchen2/yuchen2"
+    "pages/model/model"
   ],
   "requiredBackgroundModes": [
     "audio"
