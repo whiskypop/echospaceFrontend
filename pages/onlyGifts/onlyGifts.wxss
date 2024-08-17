@@ -49,6 +49,7 @@
 }
 
 .showcard2 {
+  overflow: hidden;
   width: 387px;
   height: 475px;
   margin: 18px 21px;
@@ -80,14 +81,15 @@
 }
 
 .subshowcard2-2-1 {
-  margin-left: 0px;
-  animation: scroll-left 30s linear infinite;
+  margin-left: 100px;
+  animation: scroll-left-right 10s linear infinite;
 }
 
 .subshowcard2-2-2 {
   padding-left: 95px;
-  animation: scroll-left 30s linear infinite;
+  animation: scroll-left-right 10s linear infinite;
 }
+
 @keyframes scroll-left {
   from {
     transform: translateX(0);

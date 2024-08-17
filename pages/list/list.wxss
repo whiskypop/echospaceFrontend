@@ -197,6 +197,7 @@
   justify-content: flex-end;
   align-items: center;
   border-radius: 16px; 
+  overflow: hidden;
 }
 
 .subshowcard2-1 {

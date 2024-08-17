@@ -2,10 +2,29 @@
 @import '/colorui/icon.wxss';
 
 page {
+  margin-top: 40px;
   background-color: black;
   font-size: 16px;
   /* font-family: 'Roboto'; */
   padding-bottom: calc(env(safe-area-inset-bottom)/2);
+}
+
+@keyframes scroll-left-right {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-50px); /* 向左移动100px */
+  }
+  50% {
+    transform: translateX(0); /* 回到起点 */
+  }
+  75% {
+    transform: translateX(50px); /* 向右移动100px */
+  }
+  100% {
+    transform: translateX(0); /* 回到起点 */
+  }
 }
 
 .weui-media-box__title {

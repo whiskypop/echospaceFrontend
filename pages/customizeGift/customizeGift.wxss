@@ -513,24 +513,6 @@ height: 37px;
   gap: 18px; /* 添加间距 */
 }
 
-@keyframes scroll-left-right {
-  0% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(-50px); /* 向左移动100px */
-  }
-  50% {
-    transform: translateX(0); /* 回到起点 */
-  }
-  75% {
-    transform: translateX(50px); /* 向右移动100px */
-  }
-  100% {
-    transform: translateX(0); /* 回到起点 */
-  }
-}
-
 .subshowcard2-2-1 {
   margin-left: 0px;
   animation: scroll-left-right 10s linear infinite;

@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/customizeGift/customizeGift",
+    "pages/list/list",
     "pages/index/index",
+    "pages/customizeGift/customizeGift",
     "pages/write/write",
     "pages/profile/profile",
     "pages/chat/chat",
@@ -13,7 +14,6 @@
     "pages/share/share",
     "pages/giftReceiving/giftReceiving",
     "pages/onlyGifts/onlyGifts",
-    "pages/list/list",
     "pages/mall/mall",
     "pages/giftReceivingWithPhoto/giftReceivingWithPhoto",
     "pages/model/model",
@@ -31,11 +31,7 @@
     "mp-actionSheet": "weui-miniprogram/actionsheet/actionsheet"
   },
   "window": {
-    "backgroundColor": "#F6F6F6",
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "EchoSpace",
-    "navigationBarTextStyle": "black"
+    "navigationStyle": "custom"
   },
   "permission": {
     "scope.userLocation": {
