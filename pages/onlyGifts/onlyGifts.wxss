@@ -23,329 +23,99 @@
 
 /* 名称 */
 .title {
-  font-size: 36px;
-  color: white;
-  font-weight: bold;
-}
-
-/* 描述 */
-.description {
-  font-size: 16px;
-  color: #B1B1B1;
-  line-height: 16px;
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-/* 头部组件2 */
-.heading-component2 {
-  width: 36px; /* 圆形的宽度 */
-  height: 36px; /* 圆形的高度 */
-  background-color: blue; /* 圆形的背景色 */
-  border-radius: 50%; /* 圆形 */
-  margin-right: 18px; /* 右边距 */
-}
-
-.showcard2 {
-  overflow: hidden;
-  width: 387px;
-  height: 475px;
-  margin: 18px 21px;
-  background-color: #F6DFF3;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  border-radius: 16px; 
-}
-
-.subshowcard2-2 {
-  width: 387px;
-  height: 248px;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 40px;
-  flex-shrink: 0;
-}
-
-.subshowcard2-2-1, .subshowcard2-2-2 {
-  display: flex;
-  flex-shrink: 0;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 18px;
-  width: 387px;
-  gap: 18px; /* 添加间距 */
-}
-
-.subshowcard2-2-1 {
-  margin-left: 100px;
-  animation: scroll-left-right 10s linear infinite;
-}
-
-.subshowcard2-2-2 {
-  padding-left: 95px;
-  animation: scroll-left-right 10s linear infinite;
-}
-
-@keyframes scroll-left {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-.square-image {
-    width: 115px;
-    height: 115px;
-    border-radius: 16px;
-    flex: 0 0 115px;
-    display: inline-block;
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* vertical-align: top; */
-}
-.subshowcard2-1 {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  width: 100%;
-  padding: 18px 21px;
-}
-.text-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.effect-description {
-  font-size: 16px;
-  color: #808080;
-  font-weight: bold;
-}
-.containerName {
   font-size: 30px;
-  color: #FFFFFF;
-  font-weight: bold;
-  line-height: 44px;
-}
-
-.text-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.subtitle {
-  color: #BABABA;
-  font-size: 16px;
-  text-align: left;
-  line-height: 1.5;
-}
-
-.title {
-  font-size: 30px;
-  line-height: 44px;
-  font-weight: bold;
-  text-align: left;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
-  margin-right: 10px;
-}
-
-.button-container {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  margin-right: 10px;
-  width: 115px;
-  height: 37px;
-}
-
-.button {
-  background: linear-gradient(90deg, 
-    #E631FF 0%, 
-    #AF2CF9 21%, 
-    #6726F2 50%, 
-    #1A8DF6 73%, 
-    #32C9FC 100%
-  );
-  color: white;
-  border: none;
-  border-radius: 25px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 115px !important;
-  font-size: 16px;
   font-weight: bold;
-  padding: 0;
-  box-sizing: border-box;
-  height: 37px;
-}
-
-.subcomponent1-2 {
-  width: 593px;
-  height: 248px;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
-
-.subcomponent1-2-1, .subcomponent1-2-2 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 18px;
-  width: 511px;
-  gap: 18px; /* 添加间距 */
-}
-
-.subcomponent1-2-1 {
-  margin-left: 30px;
-}
-.subcomponent1-2-2 {
-  margin-left: 135px;
-}
-.addText {
-  color: rgba(238, 228, 228, 0.774);
-  font-size: 100px;
-  font-weight: bold;
-  margin: auto;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: red;
-  margin: 0;
-}
-.component2 {
-  width: 430px;
-  padding: 21px;
-  margin-bottom: 100px;
-}
-
-.subcomponent2-1 {
-  width: 387px;
-  height: 185px;
-  background-color: pink;
-  border-radius: 16px; /* 添加圆角 */
-}
-
-.add {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 150px;
-  height: 150px;
-  background-color: pink;
-  border-radius: 16px; /* 添加圆角 */
-}
-
-.cart-info {
-  position: fixed;
-  bottom: 0;
-  height: 79px;
-
-  width: 100%;
-  background-color: #1B1C1F;
-  padding: 18px 21px;
-  display: flex;
-  
-  align-items: center;
-  color: white;
-  
-}
-.money-detail {
-  
-  display: flex;
-  flex-direction: column;
-  
-  
-}
-.money-detail1 {
-  width: 100%; /* 设置宽度为100% */
-  display: flex;
-  flex-direction: row; /* 横向排列 */
-  align-items: center; /* 垂直居中对齐 */
-  justify-content: flex-end; /* 水平靠右对齐 */
-  gap: 18px;
 }
 
 
-.button-container {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  margin-right: 10px;
-  width: 115px;
-  height: 37px;
-}
-
-.create-button {
-  background: linear-gradient(90deg, 
-  #E631FF 0%, 
-  #AF2CF9 21%, 
-  #6726F2 50%, 
-  #1A8DF6 73%, 
-  #32C9FC 100%
-);
-color: white;
-border: none;
-border-radius: 25px;
-text-align: center;
-display: flex;
-justify-content: center;
-align-items: center;
-width: 115px !important;
-font-size: 16px;
-font-weight: bold;
-padding: 0;
-box-sizing: border-box;
-height: 37px;
-}
-
-.cards-subTitledetail {
-  color: #BABABA;
-  font-size: 12px;
-  text-align: left;
-  line-height: 18px;
-}
-
-.section {
-  margin-bottom: 0px;
-  background-color: #000000;
-  border-radius: 15px;
-  margin-left: 5px;
-  margin-right: 5px;
-  padding: 0px 15px;
-}
-
-.label {
-  font-size: 13px;
-  font-weight: bold;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  display: block;
-  padding-left: 140px;
-  color: white;
-}
-
-/* music card */
-.music-card {
+.icon {
+  width: 80rpx;
+  height: 50rpx;
+  background: radial-gradient(circle, #6d3ef3, #000);
+  border-radius: 50%;
   position: relative;
-  /* display: flex; */
+  top: -51rpx;
+  left: 11rpx;
+  align-self: flex-end;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-left: -10px;
-  margin-right: -10px;
-  padding:10px;
+  justify-content: center;
+}
+
+.gift-card {
+  width: 85%;
+  background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-content {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  /* 高度与宽度相等，保持1:1比例 */
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+/* 次商品的视频内容 */
+.sub-content {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
+  margin-top: 10px;
+  width: 100%;
+  height: 50px;
+}
+
+/* 次要商品视频大小为主视频的1/4 */
+.sub-content video {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 10px;
+}
+
+.blessings {
+  width: 100%;
+}
+
+.blessingText {
+  width: 100%;
+  margin-top: 15px;
+  font-size: 24px;
+  color: #ffffff;
+  margin-left: 8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+.music-card {
+  width: 85%;
+  position: relative;
+  z-index: 1;
+  align-items: center;
+  margin-top: 10px;
   border-radius: 30px;
   background-color: #343434;
   overflow: hidden;
-  
+
 }
+
 .background {
   position: absolute;
   top: 0;
@@ -354,14 +124,17 @@ height: 37px;
   height: 100%;
   background-size: cover;
   background-position: center;
-  filter: blur(15px);
+  filter: blur(5px);
   /* z-index: -1; */
   opacity: 0.5;
+  background-color: rgba(53, 53, 53, 0.842);
+  z-index: -10;
 }
-.music-card .content {
-  position: relative;
-  z-index: 1;
-  align-items: center;
+
+.backgroundImage {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
 }
 
 .music-image {
@@ -369,48 +142,48 @@ height: 37px;
   height: 100px;
   border-radius: 25px;
   /* position: absolute; */
-  top: 0px;
-  left:10px;
+  top: 10px;
+  left: 10px;
 }
 
-.music-info {
-  /* margin-left: 120px; */
-}
 
 .music-title {
   color: white;
   font-weight: bold;
   position: absolute;
   left: 140px;
-  top: 10px;
+  top: 20px;
   white-space: normal;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: calc(100% - 140px); /* Ensure it doesn't overflow the container */
+  max-width: calc(100% - 140px);
+  /* Ensure it doesn't overflow the container */
 }
 
 
 
 .lyric-scroll {
-  max-height: 40px; /* 设置最大高度 */
+  max-height: 40px;
+  /* 设置最大高度 */
   padding: 10px;
 }
 
 .lyric {
-  display: block; /* 将歌词文本元素设置为块级元素 */
-  text-align: center; /* 设置歌词文本左对齐 */
-  color: white;
+  display: block;
+  /* 将歌词文本元素设置为块级元素 */
+  text-align: center;
+  color: rgba(255, 255, 255, 0.836);
 }
 
 
 .music-controls {
   margin-top: 10px;
-  color: white;
 }
 
 .slider-container {
   display: flex;
   align-items: center;
+  color: #fff;
 }
 
 .time {
@@ -426,8 +199,9 @@ height: 37px;
 
 .play-button {
   position: absolute;
-  right: -30px;
-  bottom: 20px; /* Adjust as needed */
+  right: -60px;
+  bottom: 40px;
+  /* Adjust as needed */
   background: none;
   border: none;
 }
@@ -439,9 +213,55 @@ height: 37px;
 
 .expand-button {
   position: absolute;
-  top: 0px;
-  right: 0px;
-  width: auto !important;
-  background-color: rgba(231, 228, 228, 0.336); /* 设置背景透明 */
+  top: 5px;
+  right: 10px;
+  width: 40px !important;
+  /* 设置按钮宽度 */
+  height: 40px;
+  /* 设置按钮高度 */
+  background-color: rgba(231, 228, 228, 0.336);
+  /* 设置背景透明 */
   border-radius: 15px;
+  /* 设置圆角 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  /* 调整字体大小 */
+  font-weight: bold;
+  /* 加粗字体 */
+  padding: 0;
+  /* 确保没有填充影响大小 */
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  height: 37px;
+  margin-top: 10px;
+}
+
+.create-button {
+  margin-right: 20px !important;
+  background: linear-gradient(90deg,
+      #E631FF 0%,
+      #AF2CF9 21%,
+      #6726F2 50%,
+      #1A8DF6 73%,
+      #32C9FC 100%);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 115px !important;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0;
+  box-sizing: border-box;
+  height: 37px;
 }

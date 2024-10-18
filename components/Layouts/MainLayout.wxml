@@ -1,91 +1,86 @@
-<!-- index.wxml -->
 <view class="page-container">
   <view class="heading">
     <view class="heading-component1">
-      <text class="title">Home</text>
-      <text class="description">Send a gift</text>
+      <text class="title">主页</text>
+      <text class="description">送TA礼物</text>
     </view>
     <video class="toggle-section-button" src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundVideo/toggleSection2.mp4" muted autoplay loop bindtap="toggleSection" controls="{{false}}"></video>
   </view>
-
+  
   <view class="bigsection">
     <view class="section">
-      <!-- <view class="section-header">
+    <!-- <view class="section-header">
       <view class="section-title">创作礼物</view>
       <view class="more-modes">More Modes</view>
     </view> -->
-      <scroll-view class="gift-scroll" scroll-x="true">
-        <view class="gift-card" bindtap="navigateToNeedCollect">
-          <image class="background-blur" mode="aspectFill"></image>
-          <view class="gift-content">
-            <view class="gift-title">create gift</view>
-            <view class="add-icon">+</view>
-          </view>
+    <scroll-view class="gift-scroll" scroll-x="true">
+      <view class="gift-card" bindtap="navigateToCustomizeGift">
+        <image class="background-blur"  mode="aspectFill"></image>
+        <view class="gift-content">
+          <view class="gift-title">创作礼物</view>
+          <view class="add-icon">+</view>
         </view>
-        <view class="gift-card" bindtap="navigateToWrite">
-          <image class="background-blur" mode="aspectFill"></image>
-          <view class="gift-content">
-            <view class="gift-title">create music gift</view>
-            <view class="add-icon">+</view>
-          </view>
+      </view>
+      <view class="gift-card" bindtap="navigateToWrite">
+        <image class="background-blur"  mode="aspectFill"></image>
+        <view class="gift-content">
+          <view class="gift-title">创作音乐礼物</view>
+          <view class="add-icon">+</view>
         </view>
-      </scroll-view>
+      </view>
+    </scroll-view>
     </view>
     <view class="section">
-      <view class="section-header">
-        <view class="title-container">
-          <view class="section-title" bind:tap="navigateToYuchen1">Gift packages</view>
-          <view class="show-more" bind:tap="navigateToModel">More</view>
-        </view>
-        <view class="section-subtitle" bind:tap="navigateToYuchen2">Select a Template and Customize</view>
+    <view class="section-header">
+      <view class="title-container">
+        <view class="section-title" bind:tap="navigateToYuchen1">礼物包</view>
+        <view class="show-more" bind:tap="navigateToModel">更多模板</view>
       </view>
-      <view class="new-widgets-section">
-        <view class="column-wrapper">
-          <view class="showcard3-1">
+      <view class="section-subtitle" bind:tap="navigateToYuchen2">选择礼物模板一键定制礼物</view>
+    </view>
+    <view class="new-widgets-section">
+        <view class="showcard3-1">
             <video class="background-video" src="cloud://echospace-mateials-9d8r8fc399ddf.6563-echospace-mateials-9d8r8fc399ddf-1326484866/videos&images/mall/index/index_2.mp4" autoplay loop muted controls="{{false}}"></video>
             <view class="copy">
               <view class="text-container">
-                <text class="effect-description">For Your Loved One</text>
-                <text class="containerName">Perfect for the Beauty Lover</text>
+                <text class="effect-description">送给你爱的她</text>
+                <text class="containerName">送给爱美的TA</text>     
               </view>
               <button class="create-button">制作同款</button>
             </view>
-          </view>
-          <view class="showcard3-1">
+        </view>
+        <view class="showcard3-1">
             <video class="background-video" src="cloud://echospace-mateials-9d8r8fc399ddf.6563-echospace-mateials-9d8r8fc399ddf-1326484866/videos&images/mall/index/index_1.mp4" autoplay loop muted controls="{{false}}"></video>
             <view class="copy">
               <view class="text-container">
                 <text class="effect-description">攻略TA的味蕾</text>
-                <text class="containerName">送给爱吃的TA</text>
+                <text class="containerName">送给爱吃的TA</text>     
               </view>
               <button class="create-button">制作同款</button>
             </view>
-          </view>
         </view>
-        <view class="column-wrapper">
-          <view class="showcard3-1">
+        <view class="showcard3-1">
             <video class="background-video" src="cloud://echospace-mateials-9d8r8fc399ddf.6563-echospace-mateials-9d8r8fc399ddf-1326484866/videos&images/mall/index/index_3.mp4" autoplay loop muted controls="{{false}}"></video>
             <view class="copy">
               <view class="text-container">
                 <text class="effect-description">攻略TA的味蕾</text>
-                <text class="containerName">送给童心的TA</text>
+                <text class="containerName">送给童心的TA</text>     
               </view>
               <button class="create-button" bind:tap="navigateTo">制作同款</button>
             </view>
-          </view>
-          <view class="showcard3-1">
+        </view>
+        <view class="showcard3-1">
             <video class="background-video" src="cloud://echospace-mateials-9d8r8fc399ddf.6563-echospace-mateials-9d8r8fc399ddf-1326484866/videos&images/mall/index/index_4.mp4" autoplay loop muted controls="{{false}}"></video>
             <view class="copy">
               <view class="text-container">
                 <text class="effect-description">送给你爱的她</text>
-                <text class="containerName">送给爱玩的TA</text>
+                <text class="containerName">送给爱玩的TA</text>     
               </view>
               <button class="create-button">制作同款</button>
             </view>
-          </view>
+            
         </view>
-      </view>
-
+    </view>
     </view>
   </view>
 </view>

@@ -1,0 +1,113 @@
+<view class="container">
+	<view class="heading">
+		<view class="heading-component1">
+			<text class="title">创作礼物</text>
+			<text class="description">开始定制你的礼物</text>
+			<view class="icon"></view>
+		</view>
+	</view>
+	<!-- Step 1 with conditional overlay for Step 2 -->
+	<view class="step1-wrapper">
+		<view class="step1" wx:if="{{step === 1 || step === 2}}">
+			<view class="step1-header">
+				<view class="step-title" bindtap="switchStep" data-step="1">step 1: 为你推荐以下礼物</view>
+				<view class="more-btn" bindtap="showMoreGifts">显示更多</view>
+			</view>
+			<view class="gift-selection">
+				<scroll-view scroll-x="true" class="scroll-container">
+					<block wx:for="{{products}}" wx:key="index">
+						<view class="product-item">
+							<!-- 商品视频 -->
+							<video class="product-video" src="{{item.video}}" autoplay muted loop controls="{{false}}"></video>
+							<!-- 商品信息 -->
+							<view class="product-info-wrapper">
+								<view class="product-info {{cart[index].quantity >= 1 ? '' : 'bigger-fontsize'}}">
+									<view class="product-name">{{item.name}}</view>
+									<view class="product-price">¥{{item.price}}</view>
+								</view>
+								<!-- 加购按钮 -->
+								<button class="quantity-button {{cart[index].quantity >= 1 ? '' : 'notDisplay'}}" bindtap="deleteFromCart" data-index="{{index}}">-</button>
+								<strong class="{{cart[index].quantity >= 1 ? '' : 'notDisplay'}}">{{cart[index].quantity}}</strong>
+								<button class="quantity-button {{cart[index].quantity >= 1 ? 'added' : ''}}" bindtap="addToCart" data-index="{{index}}">+</button>
+							</view>
+						</view>
+					</block>
+				</scroll-view>
+
+			</view>
+		</view>
+		<!-- 蒙层在步骤一时覆盖步骤二 -->
+		<view class="overlay" wx:if="{{step === 2}}"></view>
+	</view>
+
+	<!-- Step 2 with conditional overlay for Step 1 -->
+	<view class="step2-wrapper">
+		<view class="step2" wx:if="{{step === 1 || step === 2}}">
+			<view class="step-title" bindtap="switchStep" data-step="2">step 2: 定制贺卡</view>
+			<view class="card-selection">
+				<view class="card-item">
+					<view class="showcard2" bind:tap="navigateToWrite">
+						<view class="subshowcard2-2">
+							<view class="subshowcard2-2-1 scroll-container">
+								<block wx:for="{{creativityMusic1}}" wx:for-item="video" wx:key="index">
+									<video class="square-image" src="{{video}}" autoplay loop muted controls="{{false}}"></video>
+								</block>
+							</view>
+							<view class="subshowcard2-2-2 scroll-container">
+								<block wx:for="{{creativityMusic2}}" wx:for-item="video" wx:key="index">
+									<video class="square-image" src="{{video}}" autoplay loop muted controls="{{false}}"></video>
+								</block>
+							</view>
+						</view>
+						<view class="subshowcard2-1">
+							<view class="text-container">
+								<text class="effect-description">为TA写歌</text>
+								<text class="containerName">音乐贺卡</text>
+							</view>
+						</view>
+
+					</view>
+					<view class="showcardPhoto" bind:tap="navigateToWrite">
+						<view class="subshowcard2-2">
+							<view class="subshowcard2-2-1 scroll-container">
+								<block wx:for="{{creativityPhoto1}}" wx:for-item="video" wx:key="index">
+									<video class="square-image" src="{{video}}" autoplay loop muted controls="{{false}}"></video>
+								</block>
+							</view>
+							<view class="subshowcard2-2-2 scroll-container">
+								<block wx:for="{{creativityPhoto2}}" wx:for-item="video" wx:key="index">
+									<video class="square-image" src="{{video}}" autoplay loop muted controls="{{false}}"></video>
+								</block>
+							</view>
+						</view>
+						<view class="subshowcard2-1">
+							<view class="text-container">
+								<text class="effect-description">为TA记录</text>
+								<text class="photoCardName">照片贺卡</text>
+							</view>
+						</view>
+
+					</view>
+				</view>
+			</view>
+		</view>
+		<!-- 蒙层在步骤1时覆盖步骤一 -->
+		<view class="overlay" wx:if="{{step === 1}}"></view>
+	</view>
+
+	<!-- Bottom Navigation and Action Button -->
+	<view class="cart-info">
+		<view class="money-detail">
+			<text class="cards-subTitledetail">明细</text>
+			<text class="cards-subTitledetail">￥{{totalPrice}}</text>
+		</view>
+		<view class="button-container ">
+			<button class="create-button" bindtap="nextStep" wx:if="{{step === 1}}">下一步</button>
+			<button class="create-button" bindtap="goToCreate" wx:if="{{step === 2}}">去制作</button>
+		</view>
+	</view>
+	<!-- <view class="bottom-bar">
+		<button bindtap="nextStep" wx:if="{{step === 1}}">下一步</button>
+		<button bindtap="goToCreate" wx:if="{{step === 2}}">去制作</button>
+	</view> -->
+</view>

@@ -1,0 +1,204 @@
+/* index.wxss */
+.container {
+	background-color: #000;
+	height: 100%;
+	padding: 20rpx;
+	color: #fff;
+}
+
+/* 头部布局 */
+.heading {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 2.1vh 5.5vw;
+	/* 21px */
+}
+
+/* 头部组件1 */
+.heading-component1 {
+	display: flex;
+	gap: 3vw;
+	align-items: center;
+}
+
+/* 名称 */
+.title {
+	font-size: 36px;
+	color: white;
+	font-weight: bold;
+	/* 加粗文本 */
+}
+
+/* 描述 */
+.description {
+	font-size: 16px;
+	color: #B1B1B1;
+	line-height: 16px;
+	display: flex;
+	align-items: center;
+	margin-top: 10px;
+	font-weight: bold;
+}
+
+.icon {
+	width: 50rpx;
+	height: 50rpx;
+	background: radial-gradient(circle, #6d3ef3, #000);
+	border-radius: 50%;
+	/* margin-top: 5rpx; */
+	position: relative;
+	top: -23rpx;
+	left: 9rpx;
+	align-self: flex-end;
+}
+
+.section {
+	margin-bottom: 40rpx;
+}
+
+.section-title {
+	font-size: 36rpx;
+	font-weight: bold;
+	margin-bottom: 20rpx;
+}
+
+.tags {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 10px;
+	margin-bottom: 20rpx;
+	/* justify-content: flex-start;
+	align-items: flex-start; */
+}
+
+.tag {
+	flex: 0 0 22%;
+	/* width: auto; */
+	background-color: #333;
+	color: #fff;
+	border-radius: 20rpx;
+	padding: 10rpx 20rpx;
+	margin-left: 3rpx !important;
+	margin-right: 10rpx !important;
+	margin-bottom: 10rpx;
+	font-size: 28rpx;
+}
+
+.tag.selected {
+	background-color: #6d3ef3;
+}
+
+.input {
+	width: 100%;
+	height: auto;
+	padding: 10rpx;
+	line-height: 8px;
+	font-size: 25rpx;
+	color: #fff;
+	background-color: #333;
+	border-radius: 8px;
+	border: none;
+}
+
+.slider {
+	margin: 20rpx 0;
+}
+
+.recommend-button {
+	width: 100%;
+	padding: 20rpx;
+	font-size: 36rpx;
+	color: #fff;
+	background-color: #6d3ef3;
+	border-radius: 50rpx;
+	text-align: center;
+	margin-top: 60rpx;
+}
+
+.content-wrapper {
+	background-color: #74747446;
+	border-radius: 15px;
+	padding: 18px 14px;
+	margin: 0 15px;
+	gap: 3vw;
+}
+
+.slider-container {
+	position: relative;
+	width: 100%;
+	height: 50px;
+}
+
+.slider-track {
+	position: absolute;
+	top: 20px;
+	/* 调整滑轨的位置 */
+	left: 0;
+	right: 0;
+	height: 4px;
+	background-color: #ccc;
+}
+
+.slider-thumb {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background-color: #6d3ef3;
+	/* 按钮颜色 */
+	border-radius: 50%;
+	top: 13px;
+	/* 调整按钮的位置 */
+	cursor: pointer;
+	/* 鼠标光标样式 */
+}
+
+.slider-background {
+	width: 620rpx;
+	margin-top: 22px;
+	display: flex;
+	align-items: center;
+	height: 8rpx;
+	background-color: rgb(228, 228, 228);
+}
+
+.slider {
+	width: 100%;
+	padding: 0;
+	display: flex;
+	align-items: center;
+}
+
+.slider .main-slider {
+	width: calc(100% - 84rpx);
+	height: 8rpx;
+	background-color: #6d3ef3;
+}
+
+.slider .slider-circle {
+	position: relative;
+	/* 使得伪元素相对于滑块定位 */
+	width: 42rpx;
+	height: 42rpx;
+	background-color: #fff;
+	border-radius: 50%;
+	box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.5);
+}
+
+.slider .slider-circle::after {
+	content: attr(data-range);
+	/* 使用自定义属性 data-range 来显示数字 */
+	position: absolute;
+	bottom: -35rpx;
+	left: 50%;
+	/* 水平居中 */
+	transform: translateX(-50%);
+	/* 使得数字准确居中 */
+	font-size: 24rpx;
+	/* 字体大小 */
+	color: white;
+	/* 字体颜色 */
+	text-align: center;
+	/* 文字居中 */
+}

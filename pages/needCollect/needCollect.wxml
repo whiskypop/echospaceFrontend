@@ -1,0 +1,62 @@
+<view class="container">
+	<view class="heading">
+		<view class="heading-component1">
+			<text class="title">创作礼物</text>
+			<text class="description">开始定制你的礼物</text>
+			<view class="icon"></view>
+		</view>
+	</view>
+
+	<view class="content-wrapper">
+		<view class="section">
+			<text class="section-title">送礼场合</text>
+			<view class="tags">
+				<block wx:for="{{occasionTags}}" wx:key="index">
+					<button bindtap="toggleTagSelection" data-type="occasionTags" data-index="{{index}}" class="tag {{item.selected ? 'selected' : ''}}">{{item.text}}</button>
+				</block>
+			</view>
+			<input class="input" placeholder="请在此处描述你想送礼的场合...例如：新婚礼物" />
+		</view>
+
+		<view class="section">
+			<text class="section-title">送礼对象</text>
+			<view class="tags">
+				<block wx:for="{{recipientTags}}" wx:key="index">
+					<button bindtap="toggleTagSelection" data-type="recipientTags" data-index="{{index}}" class="tag {{item.selected ? 'selected' : ''}}">{{item.text}}</button>
+				</block>
+			</view>
+			<input class="input" placeholder="请在此处描述你想送礼的对象...例如：女儿" />
+		</view>
+
+		<!-- <view class="section">
+			<text class="section-title">预算</text>
+			<view class="slider-container">
+				<slider min="0" max="2000" step="100" show-value="{{false}}" value="{{minBudget}}" bindchange="onMinSliderChange" />
+				<slider min="0" max="2000" step="100" show-value="{{false}}" value="{{maxBudget}}" bindchange="onMaxSliderChange" />
+				<view class="slider-values">
+					<text>{{minBudget}}</text>
+					<text>{{maxBudget}}</text>
+				</view>
+			</view>
+		</view> -->
+		<view class="section">
+			<text class="section-title">预算</text>
+			<!-- <view class="slider-container">
+				<view class="slider-track"></view>
+				<view class="slider-thumb start-thumb" style="left: {{startPos}}px;" bindtouchstart="onStartTouch" bindtouchmove="onStartMove" bindtouchend="onEndTouch"></view>
+				<view class="slider-thumb end-thumb" style="left: {{endPos}}px;" bindtouchstart="onEndTouchStart" bindtouchmove="onEndTouchMove" bindtouchend="onEndTouchEnd"></view>
+			</view> -->
+			<view class="slider-background">
+				<view class="slider" style="padding-left: {{pdLeft}}rpx;padding-right: {{pdRight}}rpx;">
+					<view class="slider-circle" data-range="{{min}}" bindtouchstart="touchStart1" bindtouchmove="touchMove1" bindtouchend="touchEnd1"></view>
+					<view class="main-slider"></view>
+					<view class="slider-circle" data-range="{{max}}" bindtouchstart="touchStart2" bindtouchmove="touchMove2" bindtouchend="touchEnd2"></view>
+				</view>
+			</view>
+		</view>
+
+
+		<button class="recommend-button" bind:tap="navigateToLoadingGift">✨一键推荐</button>
+	</view>
+
+</view>

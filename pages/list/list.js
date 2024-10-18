@@ -23,7 +23,27 @@ Page({
         "model_name": "chirp-v3", 
         "status": "streaming"
       }
-    ]
+    ],
+    creativityMusic1: [
+      'cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/creativity/Creativity-Music Album/music10.mp4',
+      'cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/creativity/Creativity-Music Album/music11.mp4',
+      'cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/creativity/Creativity-Music Album/music12.mp4'
+    ],
+    creativityMusic2: [
+      'cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/creativity/Creativity-Music Album/music5.mp4',
+      'cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/creativity/Creativity-Music Album/music6.mp4',
+      'cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/creativity/Creativity-Music Album/music7.mp4'
+    ],
+    disneyIp1: [
+      'cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/creativity/Creativity-Disney/Disney1.mp4',
+      'cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/creativity/Creativity-Disney/Disney2.mp4',
+      'cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/creativity/Creativity-Disney/Disney3.mp4'
+    ],
+    disneyIp2: [
+      'cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/creativity/Creativity-Disney/Disney4.mp4',
+      'cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/creativity/Creativity-Disney/Disney5.mp4',
+      'cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/creativity/Creativity-Disney/Disney6.mp4'
+    ],
   },
   chooseMedia() {
     const that = this;
@@ -40,7 +60,7 @@ Page({
         const audioInfo = that.data.audioInfo;
         // Navigate to the new page and pass the media path
         wx.navigateTo({
-          url: `/pages/giftReceivingWithPhoto/giftReceivingWithPhoto?tempFilePath=${encodeURIComponent(tempFilePath)}&audioInfo=${encodeURIComponent(JSON.stringify(audioInfo))}`
+          url: `/pages/onlyGifts/onlyGifts?tempFilePath=${encodeURIComponent(tempFilePath)}&audioInfo=${encodeURIComponent(JSON.stringify(audioInfo))}`
         });
       }
     });

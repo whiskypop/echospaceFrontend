@@ -1,0 +1,13 @@
+<view class="heading">
+	<view class="heading-component1">
+		<text class="title">创作礼物</text>
+		<text class="description">开始定制你的礼物</text>
+	</view>
+</view>
+<view class="video-container">
+	<video class="circular-video" src="cloud://echospace-mateials-9d8r8fc399ddf.6563-echospace-mateials-9d8r8fc399ddf-1326484866/videos&images/mall/loading.mp4" loop autoplay muted controls="{{false}}" object-fit="cover"></video>
+</view>
+<view class="text-container">
+	<text class="text-line">echo space is choosing your gifts...</text>
+	<text class="text-line-zh">正在为您挑选礼物……</text>
+</view>

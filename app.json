@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/onlyGifts/onlyGifts",
     "pages/write/write",
-    "pages/index/index",
     "pages/yuchen1/yuchen1",
     "pages/yuchen2/yuchen2",
     "pages/list/list",
@@ -18,7 +18,10 @@
     "pages/giftReceiving/giftReceiving",
     "pages/mall/mall",
     "pages/giftReceivingWithPhoto/giftReceivingWithPhoto",
-    "pages/model/model"
+    "pages/model/model",
+    "pages/needCollect/needCollect",
+    "pages/loadingGift/loadingGift",
+    "pages/giftSelect_addCard/giftSelect_addCard"
   ],
   "requiredBackgroundModes": [
     "audio"
@@ -57,12 +60,6 @@
         "text": "主页",
         "iconPath": "icon/home.png",
         "selectedIconPath": "icon/home-selected.png"
-      },
-      {
-        "pagePath": "pages/list/list",
-        "text": "创意",
-        "iconPath": "icon/write.png",
-        "selectedIconPath": "icon/write-selected.png"
       },
       {
         "pagePath": "pages/customizeGift/customizeGift",

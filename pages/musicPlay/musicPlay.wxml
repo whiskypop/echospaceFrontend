@@ -86,7 +86,7 @@
         </view>
         
       </view>
-      <text class="label">音乐专辑</text>
+      <text class="label">音乐贺卡</text>
       <view class="plus-section">
         <view class="plus-widget">
           <image src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundImage/Plus.png" class="widget-image" mode="widthFix" bindtap="navigateToList"></image>

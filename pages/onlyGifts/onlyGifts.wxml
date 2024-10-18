@@ -1,88 +1,54 @@
 <view class="container">
   <view class="heading">
     <view class="heading-component1">
-      <text class="title">定制</text>
-      <text class="description">请在此定制礼物包</text>
-    </view>
-    <view class="heading-component2"></view>
-  </view>
-  <view class="showcard2">
-    <view class="subshowcard2-2">
-        <view class="subshowcard2-2-1 scroll-container">
-            <block wx:for="{{firstArray}}" wx:key="name">
-                <video class="square-image" src="{{item.video}}" autoplay loop muted controls="{{false}}"></video>
-            </block>
-        </view>
-        <view class="subshowcard2-2-2 scroll-container">
-            <block wx:for="{{secondArray}}" wx:key="name">
-                <video class="square-image" src="{{item.video}}" autoplay loop muted controls="{{false}}"></video>
-            </block>
-        </view>
-    </view>
-    <view class="subshowcard2-1">
-        <view class="text-container">
-            <text class="effect-description">创意商品</text>
-            <text class="containerName">商品礼物</text>
-        </view>
-        <view class="button-container">
-            <button class="button">编辑</button>
-        </view>
+      <text class="title">Your gift card will be look like this</text>
+      <!-- <text class="description">请在此定制礼物包</text> -->
+      <view class="icon"></view>
     </view>
   </view>
 
-
-  <view class="component2">
-    <view wx:if="{{showMusic}}" class="section">
-      <view class="music-card">
-        <view class="background" style="background-image: url('{{audioInfo[0].image_url}}');"></view>
-        <view class="content">
-          <image class="music-image" src="{{audioInfo[0].image_url}}" />
-          <view class="music-info">
-            <text class="music-title">{{audioInfo[0].title}}</text>
-            <scroll-view class="lyric-scroll" scroll-y="true">
-              <text class="lyric">{{audioInfo[0].lyric}}</text>
-            </scroll-view>
-          </view>
-          <view class="music-controls">
-            <!-- 进度条 -->
-            <view class="slider-container">
-              <text class="time">{{formattedCurrentTime}}</text>
-              <slider 
-                class="custom-slider"
-                min="0" 
-                max="{{duration}}" 
-                block-size="12px"
-                value="{{currentTime}}" 
-                activeColor="#fff"
-                backgroundColor="#e9e9e9"
-                bindchanging="handleSliderChanging"
-                bindchange="seekMusic" />
-              <text class="time">{{formattedDuration}}</text>
-            </view>
-            <button class="play-button" bindtap="toggleMusicPlay">
-                <image src="{{isMusicPlaying ? 'cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundImage/pause.png' : 'cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundImage/play.png'}}" class="play-icon" />
-            </button>
-          </view>
-          <button class="expand-button" bindtap="goToMusicPage">⤢</button>
+  <view class="content-wrapper">
+    <view class="gift-card">
+      <video src="{{carts[0].video}}" autoplay muted loop controls="{{false}}" class="main-content" />
+      <view class="sub-content" wx:if="{{cartsNumber >= 2}}">
+        <view wx:for="{{subcarts}}" wx:key="*this">
+          <video src="{{item.video}}" autoplay muted loop controls="{{false}}">
+          </video>
         </view>
-        
       </view>
-      <text class="label">音乐专辑</text>
+      <view class="blessings">
+        <view class="blessingText">{{audioInfo.blessing}}</view>
+      </view>
     </view>
-    <view class="add">
-      <view class="addText" bind:tap="navigateToList">+</view>
+    <view class="music-card">
+      <view class="background">
+        <image class="backgroundImage" src="{{image_url}}"></image>
+      </view>
+      <view class="content">
+        <image class="music-image" src="{{image_url}}" />
+        <view class="music-info">
+          <text class="music-title">{{audioInfo.title}}</text>
+          <scroll-view class="lyric-scroll" scroll-y="true">
+            <text class="lyric">{{audioInfo.lyric}}</text>
+          </scroll-view>
+        </view>
+        <view class="music-controls">
+          <!-- 进度条 -->
+          <view class="slider-container">
+            <text class="time">{{formattedCurrentTime}}</text>
+            <slider class="custom-slider" min="0" max="{{duration}}" block-size="12px" value="{{currentTime}}" activeColor="#fff" backgroundColor="#e9e9e9" bindchanging="handleSliderChanging" bindchange="seekMusic" />
+            <text class="time">{{formattedDuration}}</text>
+          </view>
+          <button class="play-button" bindtap="toggleMusicPlay">
+            <image src="{{isMusicPlaying ? 'cloud://echospace-mateials-9d8r8fc399ddf.6563-echospace-mateials-9d8r8fc399ddf-1326484866/icons/pause.png' : 'cloud://echospace-mateials-9d8r8fc399ddf.6563-echospace-mateials-9d8r8fc399ddf-1326484866/icons/play.png'}}" class="play-icon" />
+          </button>
+        </view>
+        <button class="expand-button" bindtap="goToMusicPage">⤢</button>
+      </view>
+
     </view>
-  </view>
-  <view class="cart-info">
-  <view class=".money-detail1">
-    <view class="money-detail">
-    <text class="cards-subTitledetail">明细</text>
-    <text class="cards-subTitledetail">￥{{totalPrice}}</text>
   </view>
   <view class="button-container ">
-    <button class="create-button" bindtap="navigateToOnlyGifts">下一步</button>
-  </view>
-  </view>
- 
+    <button class="create-button" bindtap="navigateToShare">去赠送</button>
   </view>
 </view>

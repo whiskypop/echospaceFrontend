@@ -1,4 +1,5 @@
 <view class="container">
   <image src="{{imageUrl}}" class="full-screen-image"></image>
-  <button class="navigate-button" bindtap="navigateToGiftReceiving">领取礼物</button>
+  <view class="shareButton" bindtap="navigateToGiftReceiving"></view>
+  <!-- <button class="navigate-button" bindtap="navigateToGiftReceiving">领取礼物</button> -->
 </view>

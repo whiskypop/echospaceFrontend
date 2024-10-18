@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "@miniprogram-i18n/gulp-i18n-locales": "^1.0.0-rc.12",
+    "@miniprogram-i18n/gulp-i18n-wxml": "^1.0.0-rc.12",
+    "gulp": "^5.0.0"
+  }
+}

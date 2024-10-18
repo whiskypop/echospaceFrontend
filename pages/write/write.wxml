@@ -1,7 +1,7 @@
 <view class="container">
   <view class="header">
     <!-- <view class="back" bindtap="goBack">←</view> -->
-    <view class="title">创意商城·音乐专辑定制</view>
+    <view class="title">创意商城·音乐贺卡定制</view>
     <view class="save" bindtap="save">save</view>
   </view>
 
@@ -33,6 +33,6 @@
     </view>
   </scroll-view>
 
-  <!-- <button class="create-button" bindtap="create">去创作</button> -->
-  <button class="create-button" bindtap="mockCreate">去创作</button>
+  <button class="create-button" bindtap="create">去创作</button>
+  <!-- <button class="create-button" bindtap="mockCreate">去创作</button> -->
 </view>

@@ -12,8 +12,9 @@
         <text class="cards-title">浪漫情感</text>
         <view class="cards-subTitle16">记录我们的情感</view>
       </view>
-      <view class="showcard1">
+      <view class="showcard1" bind:tap="chooseMedia">
         <view class="subshowcard1-1">
+          <video class="gallery" src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/creativity/creativityGallery/gallery5.mp4" autoplay loop muted controls="{{false}}"></video>
           <view class="content-container">
             <view class="text-container">
               <text class="effect-description">回忆当年的我们</text>
@@ -22,34 +23,33 @@
           </view>
         </view>
         <view class="subshowcard1-2">
-          <view class="blue-square"></view>
-          <view class="blue-square"></view>
-          <view class="blue-square"></view>
-          <view class="blue-square"></view>
+          <video class="blue-square" src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/creativity/creativityGallery/gallery1.mp4" autoplay loop muted controls="{{false}}"></video>
+          <video class="blue-square" src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/creativity/creativityGallery/gallery2.mp4" autoplay loop muted controls="{{false}}"></video>
+          <video class="blue-square" src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/creativity/creativityGallery/gallery3.mp4" autoplay loop muted controls="{{false}}"></video>
+          <video class="blue-square" src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/creativity/creativityGallery/gallery4.mp4" autoplay loop muted controls="{{false}}"></video>
         </view>
       </view>
       <view class="showcard2" bind:tap="navigateToWrite">
-        <view class="subshowcard2-2">
-          <view class="subshowcard2-2-1"> 
-            <view class="square"></view>
-            <view class="square"></view>
-            <view class="square"></view>
-            <view class="square"></view>
-          </view>
-          <view class="subshowcard2-2-2">
-            <view class="square"></view>
-            <view class="square"></view>
-            <view class="square"></view>
-            <view class="square"></view>
-          </view>
+            <view class="subshowcard2-2">
+                <view class="subshowcard2-2-1 scroll-container">
+                    <block wx:for="{{creativityMusic1}}" wx:for-item="video" wx:key="index">
+                        <video class="square-image" src="{{video}}" autoplay loop muted controls="{{false}}"></video>
+                    </block>
+                </view>
+                <view class="subshowcard2-2-2 scroll-container">
+                    <block wx:for="{{creativityMusic2}}" wx:for-item="video" wx:key="index">
+                        <video class="square-image" src="{{video}}" autoplay loop muted controls="{{false}}"></video>
+                    </block>
+                </view>
+            </view>
+            <view class="subshowcard2-1">
+                <view class="text-container">
+                    <text class="effect-description">来定制专属音乐表达情感</text>
+                    <text class="containerName">情感音乐</text>
+                </view>
+            </view>
+            
         </view>
-        <view class="subshowcard2-1">
-          <view class="text-container">
-            <text class="effect-description">来定制专属音乐表达情感</text>
-            <text class="product-name">情感音乐</text>
-          </view>
-        </view>
-      </view>
     </view>
     <view class="group">
       <view class="cards-titleall">
@@ -58,42 +58,42 @@
       </view>
       <view class="showcard1">
         <view class="subshowcard1-1">
+          <video class="gallery" src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/creativity/Creative game greeting card/main-gamecard2.mp4" autoplay loop muted controls="{{false}}"></video>
           <view class="content-container">
             <view class="text-container">
-              <text class="effect-description">一起解谜信息</text>
+              <text class="effect-description">一起解密信息</text>
               <text class="product-name">游戏贺卡</text>
             </view>
           </view>
         </view>
         <view class="subshowcard1-2">
-          <view class="blue-square"></view>
-          <view class="blue-square"></view>
-          <view class="blue-square"></view>
-          <view class="blue-square"></view>
+          <video class="blue-square" src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/creativity/Creative game greeting card/gamecard5.mp4" autoplay loop muted controls="{{false}}"></video>
+          <video class="blue-square" src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/creativity/Creative game greeting card/gamecard4.mp4" autoplay loop muted controls="{{false}}"></video>
+          <video class="blue-square" src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/creativity/Creative game greeting card/gamecard3.mp4" autoplay loop muted controls="{{false}}"></video>
+          <video class="blue-square" src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/creativity/Creative game greeting card/gamecard1.mp4" autoplay loop muted controls="{{false}}"></video>
         </view>
       </view>
       <view class="showcard2">
-        <view class="subshowcard2-2">
-          <view class="subshowcard2-2-1">
-            <view class="square"></view>
-            <view class="square"></view>
-            <view class="square"></view>
-            <view class="square"></view>
-          </view>
-          <view class="subshowcard2-2-2">
-            <view class="square"></view>
-            <view class="square"></view>
-            <view class="square"></view>
-            <view class="square"></view>
-          </view>
+            <view class="subshowcard2-2">
+                <view class="subshowcard2-2-1 scroll-container">
+                    <block wx:for="{{disneyIp1}}" wx:for-item="video" wx:key="index">
+                        <video class="square-image" src="{{video}}" autoplay loop muted controls="{{false}}"></video>
+                    </block>
+                </view>
+                <view class="subshowcard2-2-2 scroll-container">
+                    <block wx:for="{{disneyIp2}}" wx:for-item="video" wx:key="index">
+                        <video class="square-image" src="{{video}}" autoplay loop muted controls="{{false}}"></video>
+                    </block>
+                </view>
+            </view>
+            <view class="subshowcard2-1">
+                <view class="text-container">
+                    <text class="effect-description">一起穿梭到ip世界</text>
+                    <text class="containerName">迪士尼系列</text>
+                </view>
+            </view>
+            
         </view>
-        <view class="subshowcard2-1">
-          <view class="text-container">
-            <text class="effect-description">一起穿梭到ip世界</text>
-            <text class="product-name">迪士尼系列</text>
-          </view>
-        </view>
-      </view>
     </view> 
     <view class="group">
       <view class="cards-titleall">
@@ -102,6 +102,7 @@
       </view>
       <view class="showcard1">
         <view class="subshowcard1-1">
+          <video class="gallery" src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/creativity/Creative-Cartoon/watermark-2.mp4" autoplay loop muted controls="{{false}}"></video>
           <view class="content-container">
             <view class="text-container">
               <text class="effect-description">一起探索IP世界</text>
@@ -110,34 +111,33 @@
           </view>
         </view>
         <view class="subshowcard1-2">
-          <view class="blue-square"></view>
-          <view class="blue-square"></view>
-          <view class="blue-square"></view>
-          <view class="blue-square"></view>
+          <video class="blue-square" src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/creativity/Creative-Cartoon/watermark-3.mp4" autoplay loop muted controls="{{false}}"></video>
+          <video class="blue-square" src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/creativity/Creative-Cartoon/watermark-4.mp4" autoplay loop muted controls="{{false}}"></video>
+          <video class="blue-square" src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/creativity/Creative-Cartoon/watermark-5.mp4" autoplay loop muted controls="{{false}}"></video>
+          <video class="blue-square" src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/creativity/Creative-Cartoon/watermark.mp4" autoplay loop muted controls="{{false}}"></video>
         </view>
       </view>
-      <view class="showcard2">
-        <view class="subshowcard2-2">
-          <view class="subshowcard2-2-1">
-            <view class="square"></view>
-            <view class="square"></view>
-            <view class="square"></view>
-            <view class="square"></view>
-          </view>
-          <view class="subshowcard2-2-2">
-            <view class="square"></view>
-            <view class="square"></view>
-            <view class="square"></view>
-            <view class="square"></view>
-          </view>
+      <view class="showcard2" bind:tap="navigateToWrite">
+            <view class="subshowcard2-2">
+                <view class="subshowcard2-2-1 scroll-container">
+                    <block wx:for="{{creativityMusic1}}" wx:for-item="video" wx:key="index">
+                        <video class="square-image" src="{{video}}" autoplay loop muted controls="{{false}}"></video>
+                    </block>
+                </view>
+                <view class="subshowcard2-2-2 scroll-container">
+                    <block wx:for="{{creativityMusic2}}" wx:for-item="video" wx:key="index">
+                        <video class="square-image" src="{{video}}" autoplay loop muted controls="{{false}}"></video>
+                    </block>
+                </view>
+            </view>
+            <view class="subshowcard2-1">
+                <view class="text-container">
+                    <text class="effect-description">打造你的说唱专辑</text>
+                    <text class="containerName">酷炫音乐</text>
+                </view>
+            </view>
+            
         </view>
-        <view class="subshowcard2-1">
-          <view class="text-container">
-            <text class="subtitle">打造你的说唱专辑</text>
-            <text class="title">酷炫音乐</text>
-          </view>
-        </view>
-      </view>
     </view>
   </view>
   

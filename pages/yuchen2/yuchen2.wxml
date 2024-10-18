@@ -3,44 +3,47 @@
     <text class="title">定制</text>
     <text class="discription">请在此定制商品动效</text>
   </view>
-
-  <view class="main-image">
-    <video class="background-video" src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundVideo/foodPepsi.mp4" autoplay loop muted controls="{{false}}" ></video>
-    <!-- <text class="product-description">动效描述</text>
-    <text class="product-name">商品名</text> -->
-    <button class="apply-button">应用全部</button>
-    <view class="text-container">
-        <text class="effect-description">动效描述</text>
-        <text class="containerName">商品名</text>     
-    </view>
-  </view>
-
-  <view class="cartGifts">
-    <block wx:for="{{cartItems}}" wx:key="index">
-        <video class="product-video"
-            src="{{item.video}}"
-            autoplay
-            loop
-            muted
-            controls="{{false}}">
-        </video>
-    </block>
+  <view class="giftsContainer">
+    <view class="main-image">
+        <video class="background-video" src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundVideo/foodBurgerKing.mp4" autoplay loop muted controls="{{false}}" ></video>
+        <button class="apply-button">应用全部</button>
+        <view class="text-container">
+            <text class="effect-description">定制商品动效</text>
+            <text class="containerName">商品效果</text>     
+        </view>
     </view>
 
-
-  <view class="categories">
-    <text class="category">音效</text>
-    <text class="category">动效</text>
-    <text class="category">创意</text>
-    <text class="category">游戏</text>
-    <text class="category">互动</text>
+    <view class="cartGifts">
+        <block wx:for="{{cartItems}}" wx:key="index">
+            <video class="product-video"
+                src="{{item.video}}"
+                autoplay
+                loop
+                muted
+                controls="{{false}}">
+            </video>
+        </block>
+    </view> 
   </view>
-
-  <view class="grid">
-    <image src="/images/grid-image1.png" class="grid-img"></image>
-    <image src="/images/grid-image2.png" class="grid-img"></image>
-    <image src="/images/grid-image3.png" class="grid-img"></image>
-    <!-- Add more images as needed -->
+  
+  <view class="special-effect">
+    <view class="effectName">商品动效</view>
+    <scroll-view scroll-x="true" class="tags-scroll-container">
+        <block wx:for="{{tags}}" wx:key="*this">
+        <button class="tag {{item === selectedTag ? 'selected' : ''}}" bindtap="toggleSelection" data-tag="{{item}}">{{item}}</button>
+        </block>
+    </scroll-view>
+    <view class="specialVideos">
+        <block wx:for="{{effectItems}}" wx:key="index">
+            <video class="effect-video"
+                src="{{item}}"
+                autoplay
+                loop
+                muted
+                controls="{{false}}">
+            </video>
+        </block>
+    </view>
   </view>
   <view class="cart-info">
     <view class="money-detail">

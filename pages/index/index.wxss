@@ -1,8 +1,8 @@
 .page-container {
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  /* 撑满屏幕高度 */
 }
 
 /* 头部布局 */
@@ -11,13 +11,14 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 21px;
+  padding: 2.1vh 5.5vw;
+  /* 21px */
 }
 
 /* 头部组件1 */
 .heading-component1 {
   display: flex;
-  gap: 10px;
+  gap: 3vw;
   align-items: center;
 }
 
@@ -25,7 +26,8 @@
 .title {
   font-size: 36px;
   color: white;
-  font-weight: bold; /* 加粗文本 */
+  font-weight: bold;
+  /* 加粗文本 */
 }
 
 /* 描述 */
@@ -40,15 +42,17 @@
 }
 
 .toggle-section-button {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%; /* Makes it circular */
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 18px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  /* Makes it circular */
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 18px;
 }
+
 /* Settings icon */
 .settings-icon {
   width: 24px;
@@ -59,15 +63,15 @@
 
 .bigsection {
   margin: 0px 21px;
-  background-color: black;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   gap: 21px;
 }
+
 /* Section headers */
 .section {
-
-  background-color: black;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -85,7 +89,8 @@
 /* 列 */
 .column {
   display: flex;
-  flex-direction: row; /* 改为水平排列 */
+  flex-direction: row;
+  /* 改为水平排列 */
   gap: 10px;
 }
 
@@ -104,13 +109,14 @@
 .subcomponent2-2-1,
 .subcomponent2-2-2 {
   width: 189px;
-  height: auto; /* 高度自动调整 */
+  height: auto;
+  /* 高度自动调整 */
   background-color: #161616;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
 }
 
 /* 蓝色正方形 */
@@ -127,7 +133,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  
+
   padding: 7px 10px;
 }
 
@@ -146,15 +152,23 @@
   color: gray;
   font-size: 10px;
 }
+
 /* 蓝色圆形 */
 .circle {
-  width: 20px; /* 宽度 */
-  height: 20px; /* 高度 */
-  background-color: blue; /* 背景颜色 */
-  border-radius: 50%; /* 圆形 */
-  display: flex; /* 使用 flex 布局 */
-  justify-content: center; /* 水平居中对齐 */
-  align-items: center; /* 垂直居中对齐 */
+  width: 20px;
+  /* 宽度 */
+  height: 20px;
+  /* 高度 */
+  background-color: blue;
+  /* 背景颜色 */
+  border-radius: 50%;
+  /* 圆形 */
+  display: flex;
+  /* 使用 flex 布局 */
+  justify-content: center;
+  /* 水平居中对齐 */
+  align-items: center;
+  /* 垂直居中对齐 */
 }
 
 
@@ -191,6 +205,78 @@
   line-height: 25px;
 }
 
+.new-widgets-section {
+  display: flex;
+  flex-grow: 1;
+  /* 撑满剩余空间 */
+}
+
+.showcard3-1 {
+  width: 43vw;
+  height: 51vh;
+  background-color: rgba(158, 157, 157, 0.562);
+  border: 1px solid rgba(158, 157, 157, 0.562);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+  z-index: 999;
+  margin-bottom: 3vh;
+}
+
+.background-video {
+  /* position: absolute; */
+  /* top: 0;
+  left: 0; */
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.copy {
+  display: flex;
+  flex-direction: row;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.356);
+}
+
+.text-container {
+  display: flex;
+  width: 80vw;
+  flex-direction: column;
+  margin-left: 1vw;
+}
+
+.effect-description {
+  font-size: 10px;
+  line-height: 2vh;
+  color: #808080;
+  font-weight: bold;
+}
+
+.create-button {
+  background-color: #636363;
+  color: white;
+  font-size: 10px;
+  width: 40vw !important;
+  height: 30px;
+  line-height: 30px;
+  padding: 2px;
+  margin-right: 10px !important;
+  margin-top: 8px;
+  border-radius: 12px;
+}
+
+.containerName {
+  font-size: 14px;
+  line-height: 4vh;
+  color: #FFFFFF;
+  font-weight: bold;
+}
 
 
 
@@ -201,21 +287,22 @@
   overflow-x: scroll;
   gap: 18px;
   white-space: nowrap;
-  height: auto; /* 高度跟随素材 */
+  height: auto;
+  /* 高度跟随素材 */
 }
 
 .gift-card {
   display: inline-block;
   position: relative;
-  width: 310px; /* Adjust width */
+  width: 310px;
+  /* Adjust width */
   height: 130px;
-  background: linear-gradient(90deg, 
-    #E631FF 0%, 
-    #AF2CF9 21%, 
-    #6726F2 50%, 
-    #1A8DF6 73%, 
-    #32C9FC 100%
-  );
+  background: linear-gradient(90deg,
+      #E631FF 0%,
+      #AF2CF9 21%,
+      #6726F2 50%,
+      #1A8DF6 73%,
+      #32C9FC 100%);
   border-radius: 12px;
   margin-right: 18px;
   overflow: hidden;
@@ -225,57 +312,62 @@
 
 .background-blur {
   position: absolute;
-  
+
   background-size: cover;
   background-position: center;
 
   opacity: 0.1;
-  }
-  
-  .gift-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* 垂直居中 */
-    
-    position: relative;
-    z-index: 1;
-    padding: 16px;
-    color: white;
-    height: 100%; /* 确保父元素具有明确的高度 */
-  }
-  
-  
-  .gift-title {
-  font-size: 30px; /* Adjust font size */
+}
+
+.gift-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* 垂直居中 */
+
+  position: relative;
+  z-index: 1;
+  padding: 16px;
+  color: white;
+  height: 100%;
+  /* 确保父元素具有明确的高度 */
+}
+
+
+.gift-title {
+  font-size: 30px;
+  /* Adjust font size */
   font-weight: bold;
-  
-  }
-  
-  .add-icon {
-    position: absolute;
-    right: 16px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 54px;
-    color: #ccc;
-  }
-  
-  
+
+}
+
+.add-icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 54px;
+  color: #ccc;
+}
+
+
 .formwork {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   column-gap: 8px;
 }
+
 .formwork-Column {
   width: 45vw;
   display: flex;
   flex-direction: column;
   row-gap: 16px;
 }
+
 .gift-popup-content {
   width: 100%;
   height: 100%;
@@ -288,7 +380,8 @@
 
 .video-container {
   width: 100%;
-  padding-top: 98%; /* 保持1:1宽高比 */
+  padding-top: 98%;
+  /* 保持1:1宽高比 */
   position: relative;
 }
 
@@ -299,26 +392,33 @@
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  object-fit: cover; 
+  object-fit: cover;
 }
+
 .video-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 30%; /* 控制叠加层的高度 */
-  background-image: linear-gradient(to top, rgba(28, 28, 30, 1), rgba(28, 28, 30, 0.6), rgba(28, 28, 30, 0)); /* 1C1C1E渐变色 */
-  pointer-events: none; /* 使覆盖层不接收点击事件 */
+  height: 30%;
+  /* 控制叠加层的高度 */
+  background-image: linear-gradient(to top, rgba(28, 28, 30, 1), rgba(28, 28, 30, 0.6), rgba(28, 28, 30, 0));
+  /* 1C1C1E渐变色 */
+  pointer-events: none;
+  /* 使覆盖层不接收点击事件 */
 }
+
 .overlay-text {
   display: flex;
   color: white;
   font-size: 32px;
   font-weight: bold;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* 可选的文字阴影效果 */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  /* 可选的文字阴影效果 */
   text-align: left;
   margin-left: 23px;
 }
+
 .overlay-subtext {
   display: flex;
   text-align: left;
@@ -327,6 +427,7 @@
   margin-left: 23px;
   color: rgb(185, 183, 183);
 }
+
 .product-item {
   width: 100%;
   display: flex;
@@ -337,15 +438,17 @@
   background-color: #1B1C1F;
   /* box-shadow: 1px 1px 2px rgba(255, 254, 254, 0.6); */
 }
-.product-image{
+
+.product-image {
   width: 100rpx;
   height: 100rpx;
   border-radius: 15rpx;
 }
+
 .product-info {
   color: white;
   flex: auto;
-  
+
   text-align: left;
 }
 
@@ -371,7 +474,15 @@
   margin-right: 10px;
 }
 
-  
-  
-  
-
+.column-wrapper {
+  flex: 1;
+  /* 平分宽度 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* 内容从头到尾排列，撑满高度 */
+  /* 调整间距 */
+  flex-direction: column;
+  flex-grow: 1;
+  /* 让容器高度随着内容自动调整 */
+}

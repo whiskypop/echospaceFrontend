@@ -1,7 +1,19 @@
 Page({
     data: {
       cartItems: [], // 用于存储接收到的商品数据
-      totalPrice: 0 
+      totalPrice: 0 ,
+      tags: ['音乐动效🎼', '游戏动效🎮', '创意视频🎞️', '特殊光效'],
+      showMoreTags: false,
+      moreTags: [],
+      selectedTag: '', // 保存当前选中的tag
+      currentProducts: [], // 当前展示的产品列表
+      currentTag: '', // 保存当前展示的tag，用于区分展示视频还是图片
+      effectItems: [
+        'cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/mall/mallSuggestBirth/adidas.mp4',
+        'cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/mall/mallSuggestBirth/adidas.mp4',
+        'cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/mall/mallSuggestBirth/adidas.mp4',
+        'cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/mall/mallSuggestBirth/adidas.mp4'
+      ],
     },
   
     onLoad(options) {

@@ -25,10 +25,12 @@ App({
       }
     })
   },
-  globalData:{
-
+  globalData: {
+    globalCart: [],
+    audioInfo: {},
+    
   },
   config,
   Cloud,
-  
+
 })

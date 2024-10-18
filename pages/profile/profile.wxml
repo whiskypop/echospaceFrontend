@@ -6,16 +6,16 @@
     </view>
     <view class="heading-component2"></view>
   </view>
- 
+
 
   <!-- User Information -->
   <view class="user-info">
-    <image class="avatar" src="cloud://cloud1-5gmggv5l8f2ead23.636c-cloud1-5gmggv5l8f2ead23-1326484866/backgroundImage/Amy Adams.png" />
+    <image class="avatar" src="cloud://echospace-mateials-9d8r8fc399ddf.6563-echospace-mateials-9d8r8fc399ddf-1326484866/echo_assets/adam.jpg" />
     <view class="info">
       <text class="name">{{user_info.name}}</text>
       <text class="id">ID: {{user_info.id}}</text>
       <text class="location">{{user_info.location}}</text>
-      
+
     </view>
   </view>
 
@@ -32,7 +32,7 @@
     <scroll-view class="scroll" scroll-x="true">
       <block wx:for="{{received_gifts}}" wx:key="*this">
         <view class="gift-item">
-          <image class="gift-image" src="{{item.image}}"  bindtap="navigateToGiftReceiving" data-index="{{index}}"/>
+          <image class="gift-image" src="{{item.image}}" bindtap="navigateToGiftReceiving" data-index="{{index}}" />
           <text class="gift-name">{{item.name}}</text>
         </view>
       </block>
